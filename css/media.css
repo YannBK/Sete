@@ -1,0 +1,106 @@
+/* --------------------------------- Media --------------------*/
+
+@media(max-height: 890px){
+    #imageAcceuil{
+        height:533px;
+    } 
+    #Chalet{
+        height:565px;
+        line-height: 3rem;
+    }
+}
+@media(max-width: 1250px){/* --------------------------------- width 1250*/
+    #imageAcceuil{
+        width:796px;
+        left:0px;
+    } 
+    #Tourisme{
+        left:-40px;
+    }
+    #Contact{
+        left:0px;
+    }
+}
+
+ @media(max-width: 1030px){/* --------------------------------- width 1030*/
+    #imageAcceuil{
+        width:596px;
+        left:10px;
+
+    } 
+    #Chalet{
+        display:flex;
+        flex-direction: column;
+        float:left;
+        width:130px;
+    }
+    #Tourisme{
+        display:inline-block;
+        left:0px;
+        margin :10px auto 0px auto;
+        width:354px;;
+        height:40px;
+    }
+    .region{
+        height:40px;
+    }
+    #Contact{
+        display:inline-block;
+        margin :20px auto 15px auto;
+        height:40px;
+    }
+}
+
+@media(max-width: 800px){/* --------------------------------- width 800*/
+    body {
+        margin: 0px;
+    }
+
+    #Chalet{
+        display:flex;
+        flex-direction: row;
+        float:top;
+        flex-wrap: wrap;
+        width:95vw;
+        height:100px;
+        align-items: center;
+        border-right: none;
+        padding-top: 15px;
+        margin: 0px;
+        line-height: 2rem;
+    }
+    h2{
+        margin-top: 0px;
+    }
+    .lienNav{
+        display:inline-block;
+        padding: 5px auto;
+        margin:0;
+        max-width: 100%;
+        height: 30px;
+    }
+
+    #imageAcceuil{
+        margin-top:30px;
+        width:90vw;
+        height:60vh;
+        left:0px;
+    } 
+
+    #Tourisme{
+        display:inline-block;
+        left:0px;
+        margin :10px auto 0px auto;
+        width:354px;;
+        height:40px;
+    }
+    .region{
+        height:40px;
+    }
+    #Contact{
+        display:inline-block;
+        margin :20px auto 15px auto;
+        height:40px;
+    }
+}
+

@@ -1,0 +1,165 @@
+
+/*! OK sur 1280*1024*/
+
+
+html {
+    display: block;
+}
+
+body {
+    font-size: 13px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-repeat: no-repeat;
+    display:flex;
+    align-items: center;
+    margin: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background:url("../Fichiers/beach-1852945_1920.jpg") no-repeat center;
+}
+
+h1{
+    font-size: 2rem;
+    margin : 1.5rem auto 2rem auto;
+}
+
+#imageAcceuil{
+    display:inline-block;
+    width:896px;
+    height:633px;
+    position : relative;
+    left:-70px;
+    border-radius: 10px;;
+    box-shadow:5px 5px 15px  rgb(53, 133, 187);
+} 
+
+section{
+    font-style: normal;
+    text-shadow: none;
+    display: inline-block;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+/* --------------------------------- NavBar --------------------*/
+h2{
+    font-size: 1.3rem;
+    margin-top: -20px;
+
+}
+
+#Chalet{
+    display:flex;
+    flex-direction: column;
+    float:left;
+    width:175px;
+    height:665px;
+    justify-content: space-evenly;
+    border-right: 3px rgb(53, 133, 187) solid;
+    border-radius: 10px;;
+    padding-right: 0px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    margin: 0px 10px 0px 0px;
+    box-shadow:5px 5px 15px  rgb(53, 133, 187);
+    line-height: 4rem;
+    background-color: rgba(186, 237, 253, 0.6);
+
+}
+#Chalet p:hover{
+    background-color: rgba(255, 242, 169, 0.6);
+    font-size: 1rem;
+}
+.lienNav{
+    padding: 20px auto;
+    border : solid rgb(248, 244, 223) 2px;
+    text-decoration: none;
+    margin:0 0.2rem 0.5rem 0.2rem;
+    background-color: rgba(255, 242, 169, 0.6);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    color: black;
+    max-width: 100%;
+
+}
+
+.lienNav:hover{
+    background-color: rgba(255, 235, 122, 0.8);
+    font-size: 1.1rem;
+    box-shadow:10px 10px 25px  rgb(53, 133, 187);
+}
+/* --------------------------------- Tourisme --------------------*/
+
+#Tourisme{
+    font-size: 1rem;
+    text-decoration: none;
+    margin :30px auto 15px auto;
+    width:354px;;
+    height:60px;
+    align-content: center;
+    border-radius: 10px;
+    box-shadow:5px 5px 15px  rgb(53, 133, 187);
+    background-color: rgba(186, 237, 253, 0.5);
+    position : relative;
+    left:-130px;
+    vertical-align: middle;
+}
+
+.region{
+    height: 60px;
+    width: 115px;
+    margin:0;
+    padding: 0;
+    font-size: 1rem;
+    text-decoration: none;
+    align-content: center;
+    justify-content: center;
+    border:solid rgba(186, 237, 253, 0.7) 2px;
+    border-radius: 10px;
+    box-shadow:5px 5px 15px  rgb(53, 133, 187);
+    background-color: rgba(186, 237, 253, 0.2);
+    font-weight: 600;
+    vertical-align: middle;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.region:hover{
+    background-color: rgba(186, 237, 253, 0.9);
+    cursor:pointer;
+    box-shadow:10px 10px 25px  rgb(53, 133, 187);
+}
+.hoverPlus{
+    background-color: rgba(186, 237, 253, 0.9);
+    cursor:pointer;
+    box-shadow:10px 10px 25px  rgb(53, 133, 187);
+}
+/* --------------------------------- Contact --------------------*/
+#Contact{
+
+    font-size: 1rem;
+    text-decoration: none;
+    margin :30px auto 15px auto;
+    width:350px;
+    height:60px;
+    align-content: center;
+    justify-content: center;
+    border:solid rgba(186, 237, 253, 0.7) 2px;
+    border-radius: 10px;
+    box-shadow:5px 5px 15px  rgb(53, 133, 187);
+    background-color:rgba(186, 237, 253, 0.6);
+    position:relative;
+    left:-5px;
+    font-weight:600;
+    vertical-align: middle;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#Contact:hover{
+    background-color:rgba(186, 237, 253, 0.9);
+    cursor:pointer;
+    box-shadow:10px 10px 25px rgb(53, 133, 187);
+}
+
+
+

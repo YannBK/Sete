@@ -1,0 +1,77 @@
+body {
+    font-size: 13px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-repeat: no-repeat;
+    display:flex;
+    flex-direction: column;
+
+
+    margin: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background:url("../Fichiers/beach-1852945_1920.jpg") no-repeat center;
+}
+
+h1{
+	font-size: 2rem;
+	margin-bottom : 2rem;
+	margin-top : 2rem;
+}
+
+
+#Puzzle{
+height: 70vh;
+width: 100%;
+}
+#divSlide{
+    display: block;
+    position: relative;
+    background-color:rgba(256, 256, 256, 0.2);
+    height: 607px;
+    width: 910px;
+    border-radius: 5px;
+}
+#Slide{
+    display:block;
+    height: 607px;
+    margin:0 auto;
+    border-radius: 5px;
+}
+
+#prev-btn,#next-btn{
+    cursor:pointer;
+    position:absolute;
+    top:50%;
+    width:auto;
+    margin-top:-2rem;
+    padding: 1rem;
+    color: #fff; /*n'a pas l'air de marcher tant qu'il y a les liens html*/
+    border: none;
+    outline:none;
+    background-color: transparent;
+    transition: 0.5s ease-out;
+}
+#prev-btn a,#next-btn a{ /*TODOdevrait disparaitre avec la dépollution de html, à intégrer ci-dessus*/
+    text-decoration: none;
+    color: rgb(68, 68, 68);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+#next-btn{
+    right:0;
+    border-radius: 3px 0 0 3px ;
+}
+#prev-btn{
+    left:0;
+    border-radius: 0 3px 3px 0;
+}
+
+#prev-btn:hover,#next-btn:hover{
+    background-color: rgba(0, 0, 0, 0.65);
+}
+#prev-btn a:hover,#next-btn a:hover{ /*après dépollution, que ca marche sur le hover du btn*/
+    color: rgb(200, 200, 200);
+}
+#prev-btn a:active,#next-btn a:active{ /*après dépollution, que ca marche sur le hover du btn*/
+    color:rgb(71, 71, 71);
+}
