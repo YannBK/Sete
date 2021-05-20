@@ -1,7 +1,7 @@
 /* --------------------------------- Media --------------------*/
 
 @media(max-height: 890px){
-    #imageAcceuil{
+    #imageAcceuil,#divSlide,#Slide{
         height:533px;
     } 
     #Chalet{
@@ -10,7 +10,7 @@
     }
 }
 @media(max-width: 1250px){/* --------------------------------- width 1250*/
-    #imageAcceuil{
+    #imageAcceuil,#divSlide,#Slide{
         width:796px;
         left:0px;
     } 
@@ -23,7 +23,7 @@
 }
 
  @media(max-width: 1030px){/* --------------------------------- width 1030*/
-    #imageAcceuil{
+    #imageAcceuil,#divSlide,#Slide{
         width:596px;
         left:10px;
 
@@ -80,12 +80,13 @@
         height: 30px;
     }
 
-    #imageAcceuil{
-        margin-top:30px;
+    #imageAcceuil,#divSlide,#Slide{
+        margin:30px auto 0 auto;
         width:90vw;
-        height:60vh;
+        height:50vh;
         left:0px;
     } 
+
 
     #Tourisme{
         display:inline-block;
@@ -100,7 +101,7 @@
     #Contact{
         display:inline-block;
         margin :20px auto 15px auto;
-        height:40px;
+        height:45px;
     }
 }
 

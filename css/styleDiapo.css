@@ -14,10 +14,7 @@ h1{
 	margin-bottom : 2rem;
 	margin-top : 2rem;
 }
-#Puzzle{
-    height: 70vh;
-    width: 100%;
-}
+
 #divSlide{
     display: block;
     position: relative;
