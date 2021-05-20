@@ -5,23 +5,18 @@ body {
     background-repeat: no-repeat;
     display:flex;
     flex-direction: column;
-
-
     margin: 10px;
     font-family:Georgia, 'Times New Roman', Times, serif;
     background:url("../Fichiers/beach-1852945_1920.jpg") no-repeat center;
 }
-
 h1{
 	font-size: 2rem;
 	margin-bottom : 2rem;
 	margin-top : 2rem;
 }
-
-
 #Puzzle{
-height: 70vh;
-width: 100%;
+    height: 70vh;
+    width: 100%;
 }
 #divSlide{
     display: block;
@@ -37,8 +32,8 @@ width: 100%;
     margin:0 auto;
     border-radius: 5px;
 }
-/* ---------------- ----------- boutons previous - next */
-button{
+/* ---------------- ----------- boutons controle */
+.btn{
     cursor:pointer;
     position:absolute;
     top:50%;
@@ -47,14 +42,13 @@ button{
     padding: 1rem;
     border: none;
     outline:none;
-    background-color: black;
-    transition: 0.3s ease-out;
+    background-color: transparent;
+    transition: 0.4s ease-out;
     text-decoration: none;
     color: rgb(68, 68, 68);
     font-size: 1.2rem;
     font-weight: bold;
 }
-
 #next-btn{
     right:0;
     border-radius: 3px 0 0 3px ;
@@ -63,16 +57,6 @@ button{
     left:0;
     border-radius: 0 3px 3px 0;
 }
-
-#prev-btn:hover,#next-btn:hover{
-    background-color: rgba(0, 0, 0, 0.65);
-    color: rgb(200, 200, 200);
-}
-
-#prev-btn:active,#next-btn:active{ 
-    color:rgb(71, 71, 71);
-}
-
 #stop{
     top:97%;
     bottom:0;
@@ -80,19 +64,45 @@ button{
     margin-right: 4rem;
     border-radius: 3px;
 }
-
 #play{
     top:97%;
     bottom:0;
     margin-left: 4rem;
     border-radius: 3px;
 }
-
-#stop:hover,#play:hover{
+.btn:hover{
     background-color: rgba(0, 0, 0, 0.65);
-    color: rgb(200, 200, 200);
+    color: rgb(220, 220, 220);
 }
-
-#stop:active,#play:active{ 
+.btn:active{
     color:rgb(71, 71, 71);
+}
+.hoverDiv{
+    background-color: rgba(0, 0, 0, 0.25);
+    color: rgb(220, 220, 220);
+} 
+/* ---------------- ----------- retour accueil */
+#Accueil{
+    height: 60px;
+    width: 115px;
+    margin:0;
+    padding: 0;
+    font-size: 1rem;
+    text-decoration: none;
+    align-content: center;
+    justify-content: center;
+    border:solid rgba(186, 237, 253, 0.7) 2px;
+    border-radius: 10px;
+    box-shadow:5px 5px 15px  rgb(53, 133, 187);
+    background-color: rgba(186, 237, 253, 0.2);
+    font-weight: 600;
+    vertical-align: middle;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 0.4s;
+}
+#Accueil:hover{
+    background-color: rgba(186, 237, 253, 0.9);
+    cursor:pointer;
+    box-shadow:10px 10px 25px  rgb(53, 133, 187);
+    font-size:126%;
 }
