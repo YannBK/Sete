@@ -46,6 +46,7 @@ let speed = 2000;
 let i = 0;
 let b;
 let object_timer;
+
 function autoSlide(imgName) {
 	if (document.images)
 	{
@@ -56,6 +57,7 @@ function autoSlide(imgName) {
 		objet_timer = setTimeout('autoSlide(b)',speed);
 	}
 }
+
 function manualSlide(direction) {
 	arret();
 	if (document.images) {
@@ -70,13 +72,26 @@ function manualSlide(direction) {
 	}
 }
 
+
 //arreter le defilement
 function arret() {
 	clearTimeout(objet_timer);
 }
 
-autoSlide('Slide');
+//boutons de commande
+const prevBtn = document.getElementById('prev-btn');
+prevBtn.addEventListener('click', () => manualSlide(-1));
 
+const nextBtn = document.getElementById('next-btn');
+nextBtn.addEventListener('click', () => manualSlide(1));
+
+const stop = document.getElementById('stop');
+stop.addEventListener('click', () => arret());
+
+const play = document.getElementById('play');
+play.addEventListener('click', () => autoSlide('Slide'));
+
+autoSlide('Slide')
 
 
 

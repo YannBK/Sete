@@ -37,26 +37,24 @@ width: 100%;
     margin:0 auto;
     border-radius: 5px;
 }
-
-#prev-btn,#next-btn{
+/* ---------------- ----------- boutons previous - next */
+button{
     cursor:pointer;
     position:absolute;
     top:50%;
     width:auto;
     margin-top:-2rem;
     padding: 1rem;
-    color: #fff; /*n'a pas l'air de marcher tant qu'il y a les liens html*/
     border: none;
     outline:none;
-    background-color: transparent;
-    transition: 0.5s ease-out;
-}
-#prev-btn a,#next-btn a{ /*TODOdevrait disparaitre avec la dépollution de html, à intégrer ci-dessus*/
+    background-color: black;
+    transition: 0.3s ease-out;
     text-decoration: none;
     color: rgb(68, 68, 68);
     font-size: 1.2rem;
     font-weight: bold;
 }
+
 #next-btn{
     right:0;
     border-radius: 3px 0 0 3px ;
@@ -68,10 +66,33 @@ width: 100%;
 
 #prev-btn:hover,#next-btn:hover{
     background-color: rgba(0, 0, 0, 0.65);
-}
-#prev-btn a:hover,#next-btn a:hover{ /*après dépollution, que ca marche sur le hover du btn*/
     color: rgb(200, 200, 200);
 }
-#prev-btn a:active,#next-btn a:active{ /*après dépollution, que ca marche sur le hover du btn*/
+
+#prev-btn:active,#next-btn:active{ 
+    color:rgb(71, 71, 71);
+}
+
+#stop{
+    top:97%;
+    bottom:0;
+    margin-left: -4rem;;
+    margin-right: 4rem;
+    border-radius: 3px;
+}
+
+#play{
+    top:97%;
+    bottom:0;
+    margin-left: 4rem;
+    border-radius: 3px;
+}
+
+#stop:hover,#play:hover{
+    background-color: rgba(0, 0, 0, 0.65);
+    color: rgb(200, 200, 200);
+}
+
+#stop:active,#play:active{ 
     color:rgb(71, 71, 71);
 }
