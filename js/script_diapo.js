@@ -24,22 +24,6 @@ const Images = ["../Fichiers/sete/1_Vue_mer.jpg",
 	"../Fichiers/sete/23_salon_cuisine.jpg"];
 let arrLen = Images.length - 1
 
-//changement manuel
-let imgVue = 0
-
-function manualPuzzle(direction) {
-	if (document.images) {
-		imgVue = imgVue + direction
-		if (imgVue > arrLen) {
-			imgVue = 0
-		}
-		if (imgVue < 0) {
-			imgVue = arrLen
-		}
-		document.Puzzle.src = Images[imgVue]
-	}
-}
-
 //changement automatique + manuel
 
 let speed = 2000;
@@ -55,10 +39,12 @@ function autoSlide(imgName) {
 		b = imgName;
 		objet_timer = setTimeout('autoSlide(b)', speed);
 	}
+	play.disabled = true;
 }
 
 function manualSlide(direction) {
 	arret();
+	play.disabled = false;
 	if (document.images) {
 		i = i + direction
 		if (i > arrLen) {
@@ -74,6 +60,7 @@ function manualSlide(direction) {
 //arreter le defilement
 function arret() {
 	clearTimeout(objet_timer);
+	play.disabled = false;
 }
 
 //boutons de commande
@@ -116,31 +103,4 @@ divHover.addEventListener("mouseleave", removeHoverDiv)
 
 
 
-
-
-
-
-
-
-
-
-
-
-/*
-//changement automatique simple
-let speed = 2000;
-let i = 0;
-let b;
-let object_timer;
-function autoSlide(imgName) {
-  if (document.images)
-  {
-	document.getElementById(imgName).src = Images[i];
-	i++;
-	if (i > Images.length-1) {i = 0;}
-	b=imgName;
-	objet_timer = setTimeout('autoSlide(b)',speed);
-  }
-}
- */
 

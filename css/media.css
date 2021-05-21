@@ -1,68 +1,112 @@
-/* --------------------------------- Media --------------------*/
+/* /* /* --------------------------------- Media --------------------*/
 
-@media(max-height: 890px){
-    #imageAcceuil,#divSlide,#Slide{
-        height:533px;
-    } 
-    #Chalet{
-        height:565px;
-        line-height: 3rem;
-    }
-}
-@media(max-width: 1250px){/* --------------------------------- width 1250*/
-    #imageAcceuil,#divSlide,#Slide{
-        width:796px;
-        left:0px;
-    } 
-    #Tourisme{
-        left:-40px;
-    }
-    #Contact{
-        left:0px;
-    }
-}
-
- @media(max-width: 1030px){/* --------------------------------- width 1030*/
-    #imageAcceuil,#divSlide,#Slide{
-        width:596px;
-        left:10px;
-
-    } 
-    #Chalet{
-        display:flex;
-        flex-direction: column;
-        float:left;
-        width:130px;
-    }
-    #Tourisme{
-        display:inline-block;
-        left:0px;
-        margin :10px auto 0px auto;
-        width:354px;;
-        height:40px;
-    }
-    .region{
-        height:40px;
-    }
-    #Contact{
-        display:inline-block;
-        margin :20px auto 15px auto;
-        height:40px;
-    }
-}
-
-@media(max-width: 800px){/* --------------------------------- width 800*/
-    body {
+@media(max-height: 900px){/* ------------------------- height 900*/
+    body{
+        transform: scale(0.95);
         margin: 0px;
     }
-
+    h1{
+        margin: 0 0 2rem 0;
+    }
+    #divSlide,
+    #Slide{
+        top: 0px;
+    }
+    #Accueil{
+        position:relative;
+        top: 10px;
+    }
+}
+ @media(max-width: 1250px){/* --------------------------------- width 1250*/
+    #imageAcceuil,
+    #divSlide{
+        height: 569px;
+        width: 806px;
+        left: 0px;
+    } 
+    #Tourisme{
+        left: -200px;
+        margin-top: 70px;
+    }
+    #Contact{
+        left: 200px;
+    }
+    #divSlide,
+    #Slide{
+        top: 60px;
+    }
+    #Accueil{
+        position: relative;
+        top: 120px;
+    }
+}
+@media(max-width: 1050px){/* --------------------------------- width 1050*/
+    #imageAcceuil,
+    #divSlide{
+        height: 506px;
+        width: 715px;
+        left: 0px;
+    } 
+    #divSlide,
+    #Slide{
+        top: 60px;
+    }
+     #Accueil{
+        position: relative;
+        top: 120px;
+    }
+}
+ @media(max-width: 950px){/* --------------------------------- width 950*/
+    body{
+        margin: 0px;
+    }
     #Chalet{
-        display:flex;
+        display: flex;
         flex-direction: row;
-        float:top;
+        float: top;
         flex-wrap: wrap;
-        width:95vw;
-        height:100px;
+        width: 95vw;
+        height: 100px;
+        align-items: center;
+        border-right: none;
+        padding-top: 15px;
+        margin: 0px auto 10px auto;
+        line-height: 2rem;
+    }
+    h2{
+        margin-top: 0px;
+    }
+    .lienNav{
+        display: inline-block;
+        padding: 2px auto;
+        margin: 0 2px;
+        max-width: 100%;
+        height: 30px;
+    }
+    #divSlide,
+    #Slide{
+        top: 60px;
+    }
+    #Accueil{
+        position: relative;
+        top: 120px;
+    }
+    #Tourisme{
+        margin-top: 5px;
+    }
+}
+@media(max-width: 750px){/* --------------------------------- width 750*/
+    body{
+        margin: 0px;
+        text-align: center;
+    }
+    #Chalet{
+        display: flex;
+        flex-direction: row;
+        float: top;
+        flex-wrap: wrap;
+        width: 100vw;
+        height: 90px;
         align-items: center;
         border-right: none;
         padding-top: 15px;
@@ -73,35 +117,54 @@
         margin-top: 0px;
     }
     .lienNav{
-        display:inline-block;
+        display: inline-block;
         padding: 5px auto;
-        margin:0;
+        margin: 0;
         max-width: 100%;
         height: 30px;
     }
-
-    #imageAcceuil,#divSlide,#Slide{
-        margin:30px auto 0 auto;
-        width:90vw;
-        height:50vh;
-        left:0px;
+    #imageAcceuil{
+        margin: 30px auto 30px auto;
+        width: 627px;
+        height: 443px;
+        left: 0px;
     } 
-
-
+    #divSlide,
+    #Slide{
+        top: 60px;
+    }
+    #Accueil{
+        position: relative;
+        top: 120px;
+    }
     #Tourisme{
-        display:inline-block;
-        left:0px;
-        margin :10px auto 0px auto;
-        width:354px;;
-        height:40px;
+        display: inline-block;
+        left: 0px;
+        margin: 10px auto 0px auto;
+        width: 354px;;
+        height: 40px;
     }
     .region{
-        height:40px;
+        height: 40px;
     }
     #Contact{
-        display:inline-block;
-        margin :20px auto 15px auto;
-        height:45px;
+        display: inline-block;
+        margin: 10px auto 0px auto;
+        height: 45px;
+        bottom: 0px;
+        left: 0px;
     }
 }
-
+@media(max-width: 675px){/* --------------------------------- width 675*/
+    #imageAcceuil,
+    #divSlide{
+        margin: 30px auto 30px auto;
+        width: 519px;
+        height: 367px;
+        left: 0px;
+    } 
+    #Accueil{
+        position: relative;
+        top: 120px;
+    }
+}
