@@ -1,54 +1,34 @@
 
-//effet hover sur les liens touristiques
 const region = document.querySelector('#laRegion');
 const regions = document.getElementsByClassName('region');
 
-const hoverRegionsPlus = () => {
-    for (let i = 0; i < regions.length; i++) {
-        regions[i].style.display= "block";
-        regions[i].classList.add('hoverPlus');
-}
-}
-
-const removeRegionsPlus = () => {
-    for (let i = 0; i < regions.length; i++) {
-        regions[i].style.display= "none";
-}
-}
-
+//liste déroulente et hover sur les liens touristiques
 const hoverRegions = () => {
     for (let i = 0; i < regions.length; i++) {
-        regions[i].style.display= "block";
+        regions[i].style.display = "inline-block";
     }
 }
 
 const removeHoverRegions = () => {
     for (let i = 0; i < regions.length; i++) {
-        regions[i].style.display= "none";
-        regions[i].classList.remove('hoverPlus');
+        regions[i].style.display = "none";
     }
 }
 
-function allez(){
+//eventListeners
+function apparition() {
     for (let i = 0; i < regions.length; i++) {
-        regions[i].addEventListener("mouseenter", hoverRegionsPlus)
-        regions[i].addEventListener("mouseleave", removeRegionsPlus)
+        region.addEventListener("mouseenter", hoverRegions)
+        region.addEventListener("mouseleave", removeHoverRegions)
     }
 }
-region.addEventListener("mouseenter", hoverRegions)
-region.addEventListener("mouseleave", removeHoverRegions)
-allez();
 
+function constance() {
+    for (let i = 0; i < regions.length; i++) {
+        regions[i].addEventListener("mouseenter", hoverRegions)
+        regions[i].addEventListener("mouseleave", removeHoverRegions)
+    }
+}
 
-
-{/* <div class="lienNav" id="Région">
-                    <p>La région :</p>
-                    <ul>
-                        <li class="liregion"><a href="https://www.my-hourtin.com/" target="_blank"><button
-                                    class="region" id="Hourtin">Hourtin</button></a></li>
-                        <li class="liregion"><a href="http://www.medoc-tourisme.com/" target="_blank"><button
-                                    class="region" id="Medoc">Le Médoc</button></a></li>
-                        <li class="liregion"><a href="https://www.gironde-tourisme.fr/" target="_blank"><button
-                                    class="region" id="Gironde">La Gironde</button></a></li>
-                    </ul>
-                </div> */}
+apparition();
+constance();

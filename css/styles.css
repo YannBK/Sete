@@ -1,38 +1,29 @@
-/*! OK sur 1280*1024*/
 
-html{
-    /* display: flex;
-    align-items: center;
-    justify-content:center; */
-}
+
 body{
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     justify-content: space-evenly;
-    /* margin:  0 20px;
-    padding: 0 20px 0 20px; */
     font-family: Georgia, 'Times New Roman', Times, serif;
     background: url("../Fichiers/beach-1852945_1920.jpg") no-repeat center;
     font-size: 13px;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     text-align: center;
     background-repeat: no-repeat;
-
 }
 h1{
     font-size: 2rem;
     margin: 2rem auto 2rem auto;
 }
 #nav_contenu{
-    display:flex;
+    display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
-    align-items:flex-start;
-    /* margin-right:20px; */
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
 .princ{
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -42,21 +33,10 @@ h1{
     width: 896px;
     height: 633px;
     position: relative;
-    /* right:5rem; */
-    /* left: -70px; */
     border-radius: 10px;
     box-shadow: 5px 5px 15px  rgb(53, 133, 187);
     margin-left: 20px;
 } 
-/* section{
-    font-style: normal;
-    text-shadow: none;
-    display: inline-block;
-    margin-block-start: 1rem;
-    margin-block-end: 1rem;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-} */
 /* --------------------------------- NavBar --------------------*/
 h2{
     font-size: 1.3rem;
@@ -64,14 +44,12 @@ h2{
 }
 h2 a{
     text-decoration: none;
-    color:black;
+    color: black;
 }
 #Chalet{
     display: flex;
     flex-direction: column;
-    position:relative;
-    /* right:5rem; */
-    /* float:left; */
+    position: relative;
     width: 175px;
     height: 670px;
     justify-content: space-evenly;
@@ -89,7 +67,7 @@ h2 a{
     padding: 10px auto;
     border: solid rgb(248, 244, 223) 2px;
     text-decoration: none;
-    margin: 0 0.2rem 0.7rem 0.2rem;
+    margin: 0 0.1rem 0.7rem 0.1rem;
     background-color: rgba(255, 242, 169, 0.6);
     border-radius: 5px;
     font-size: 1rem;
@@ -108,25 +86,24 @@ h2 a{
 /* --------------------------------- Tourisme --------------------*/
  #Tourisme{
 position: absolute;
-left:173px;
-bottom:30px;
+left: 174px;
+bottom: 29px;
 z-index: 100;
 font-size: 1rem;
 }
-.liregion a{
+#Tourisme a{
     text-decoration: none;
 }
 .region{
-    display:none;
+    display: none;
     height: 60px;
     width: 115px;
-    margin: 0;
+    margin-top: 0;
     padding: 0;
     font-size: 1rem;
-
     align-content: center;
     justify-content: center;
-    border: solid rgba(186, 237, 253, 0.7) 2px;
+    border: solid rgba(186, 237, 253, 0.7) 1px;
     border-radius: 10px;
     box-shadow: 5px 5px 15px  rgb(53, 133, 187);
     background-color: rgba(186, 237, 253, 0.6);
@@ -141,18 +118,12 @@ font-size: 1rem;
     box-shadow: 10px 10px 25px  rgb(53, 133, 187);
     font-size: 103%;
 }
-.hoverPlus{
-    background-color: rgba(186, 237, 253, 0.6);
-    cursor: pointer;
-    box-shadow: 10px 10px 25px  rgb(53, 133, 187);
-    font-size: 103%;
-}
 /* --------------------------------- Contact --------------------*/
 #Contact{
     display: inline-block;
     font-size: 1rem;
     text-decoration: none;
-    margin :30px auto 0 auto;
+    margin: 30px auto 0 auto;
     width: 350px;
     height: 60px;
     align-content: center;
@@ -162,7 +133,6 @@ font-size: 1rem;
     box-shadow: 5px 5px 15px  rgb(53, 133, 187);
     background-color: rgba(186, 237, 253, 0.6);
     position: relative;
-    /* bottom: 105px; */
     font-weight: 600;
     vertical-align: middle;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -174,6 +144,3 @@ font-size: 1rem;
     box-shadow: 10px 10px 25px rgb(53, 133, 187);
     font-size: 126%;
 }
-
-
-

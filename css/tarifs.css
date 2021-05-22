@@ -1,12 +1,9 @@
 
-
 #imageCalendrier{
     display: inline-block;
     width: 806px;
     height: 569px;
     position: relative;
-    /* right:5rem; */
-    /* left: -70px; */
     border-radius: 10px;
     box-shadow: 5px 5px 15px  rgb(53, 133, 187);
     margin-left: 20px;
@@ -36,17 +33,12 @@
     width: 60px;
     margin: auto 20px;
 }
-
 #legendRed{
     background-color: red;
 }
-
 #legendBlue{
 background-color: blue;
 }
-
 #legendGreen{
 background-color: green;
 }
-
-
