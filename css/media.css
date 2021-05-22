@@ -15,11 +15,12 @@
     #Accueil{
         position:relative;
         top: 10px;
-    }
+    }*/
 }
- */ @media(max-width: 1250px){/* --------------------------------- width 1250*/
+  @media(max-width: 1250px){/* --------------------------------- width 1250*/
      #imageAcceuil,
-    #divSlide{
+    #divSlide,
+    #imageCalendrier{
         height: 569px;
         width: 806px;
 
@@ -38,11 +39,12 @@
     #Accueil{
         position: relative;
         top: 120px;
-    }
+    }*/
 }
- */@media(max-width: 1050px){/* --------------------------------- width 1050*/
+ @media(max-width: 1050px){/* --------------------------------- width 1050*/
      #imageAcceuil,
-    #divSlide{
+    #divSlide,
+    #imageCalendrier{
         height: 506px;
         width: 715px;
         /* left: 0px; */
@@ -54,17 +56,23 @@
      #Accueil{
         position: relative;
         top: 120px;
-    }
+    }*/
 }
- */ @media(max-width: 950px){/* --------------------------------- width 950*/
+  @media(max-width: 950px){/* --------------------------------- width 950*/
     #imageAcceuil,
-    #divSlide{
+    #divSlide,
+    #imageCalendrier{
         width: 627px;
         height: 443px;
         /* left: 0px; */
     } 
     #princ{
         align-self: center;
+    }
+    #légende{
+
+        width: 627px;
+
     }
 /*     body{
         margin: 10px;
@@ -102,9 +110,9 @@
     }
     #Tourisme{
         margin-top: 5px;
-    }
+    }*/
 }
- */@media(max-width: 850px){/* --------------------------------- width 750*/
+ @media(max-width: 850px){/* --------------------------------- width 750*/
     /* body{
         display: flex;
         flex-direction: row;
@@ -123,7 +131,7 @@
         /* float: top; */
         flex-wrap: wrap;
         width: 600px;
-        height: 90px;
+        height: 65px;
         align-items: center;
         border: none;
         /* padding-top: 20px; */
@@ -138,9 +146,16 @@
         padding-top: 20px;
         padding-bottom: 35px; */
     }
-    #imageAcceuil{
+    #imageAcceuil,
+    #divSlide,
+    #imageCalendrier{
         margin-left: 0;
     } 
+    #légende{
+height: 60px;
+        margin-left: 0;
+
+    }
     #Contact{
 
         margin :20px auto 20px; auto;
@@ -186,22 +201,30 @@
         height: 45px;
         bottom: 0px;
         left: 0px;
-    }
+    }*/
 }
- */@media(max-width: 650px){/* --------------------------------- width 675*/
+ @media(max-width: 650px){/* --------------------------------- width 675*/
      #imageAcceuil,
-    #divSlide{
+    #divSlide,
+    #imageCalendrier{
 
         width: 500px;
         height: 353px;
 
     } 
+    #légende{
+        width: 500px;
+        height: 60px;
+                margin-left: 0;
+        
+            }
     #Chalet{
         width: 500px;
-        height: 90px;
+        /* height: 90px; */
+    }
 /*    #Accueil{
         position: relative;
         top: 120px;
-    }
+    }*/
 }
- */
+ 
