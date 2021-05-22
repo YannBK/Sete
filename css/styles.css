@@ -87,8 +87,6 @@ h2{
     height: 60px;
     align-content: center;
     border-radius: 10px;
-    box-shadow: 5px 5px 15px  rgb(53, 133, 187);
-    background-color: rgba(186, 237, 253, 0.5);
     position: relative;
     left: -330px;
     vertical-align: middle;
@@ -105,7 +103,7 @@ h2{
     border: solid rgba(186, 237, 253, 0.7) 2px;
     border-radius: 10px;
     box-shadow: 5px 5px 15px  rgb(53, 133, 187);
-    background-color: rgba(186, 237, 253, 0.2);
+    background-color: rgba(186, 237, 253, 0.6);
     font-weight: 600;
     vertical-align: middle;
     font-family: Verdana, Geneva, Tahoma, sans-serif;

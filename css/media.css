@@ -58,7 +58,7 @@
 }
  @media(max-width: 950px){/* --------------------------------- width 950*/
     body{
-        margin: 0px;
+        margin: 10px;
     }
     #Chalet{
         display: flex;
