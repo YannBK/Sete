@@ -1,14 +1,14 @@
 /* /* /* --------------------------------- Media --------------------*/
 
-@media(max-height: 900px){/* ------------------------- height 900*/
-    body{
-        transform: scale(0.95);
+@media(max-height: 800px){/* ------------------------- height 900*/
+     body{
+        transform: scale(0.90);
         margin: 0px;
     }
     h1{
         margin: 0 0 2rem 0;
     }
-    #divSlide,
+/*    #divSlide,
     #Slide{
         top: 0px;
     }
@@ -17,14 +17,14 @@
         top: 10px;
     }
 }
- @media(max-width: 1250px){/* --------------------------------- width 1250*/
-    #imageAcceuil,
+ */ @media(max-width: 1250px){/* --------------------------------- width 1250*/
+     #imageAcceuil,
     #divSlide{
         height: 569px;
         width: 806px;
-        left: 0px;
+
     } 
-    #Tourisme{
+ /*   #Tourisme{
         left: -200px;
         margin-top: 70px;
     }
@@ -40,14 +40,14 @@
         top: 120px;
     }
 }
-@media(max-width: 1050px){/* --------------------------------- width 1050*/
-    #imageAcceuil,
+ */@media(max-width: 1050px){/* --------------------------------- width 1050*/
+     #imageAcceuil,
     #divSlide{
         height: 506px;
         width: 715px;
-        left: 0px;
+        /* left: 0px; */
     } 
-    #divSlide,
+/*    #divSlide,
     #Slide{
         top: 60px;
     }
@@ -56,8 +56,17 @@
         top: 120px;
     }
 }
- @media(max-width: 950px){/* --------------------------------- width 950*/
-    body{
+ */ @media(max-width: 950px){/* --------------------------------- width 950*/
+    #imageAcceuil,
+    #divSlide{
+        width: 627px;
+        height: 443px;
+        /* left: 0px; */
+    } 
+    #princ{
+        align-self: center;
+    }
+/*     body{
         margin: 10px;
     }
     #Chalet{
@@ -95,25 +104,49 @@
         margin-top: 5px;
     }
 }
-@media(max-width: 750px){/* --------------------------------- width 750*/
-    body{
-        margin: 0px;
-        text-align: center;
-    }
-    #Chalet{
+ */@media(max-width: 850px){/* --------------------------------- width 750*/
+    /* body{
         display: flex;
         flex-direction: row;
-        float: top;
+        align-items:center;
+        justify-content: center;
+    } */
+    #nav_contenu{
+        display:flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        align-items:center;
+        /* margin-right:20px; */
+    }
+    #Chalet{
+        flex-direction: row;
+        /* float: top; */
         flex-wrap: wrap;
-        width: 100vw;
+        width: 600px;
         height: 90px;
         align-items: center;
-        border-right: none;
-        padding-top: 15px;
-        margin: 0px;
+        border: none;
+        /* padding-top: 20px; */
+        margin-bottom: 20px;
         line-height: 2rem;
+        vertical-align: middle;
+
+        /* flex-direction: column; */
+        /* width: 175px;
+        justify-content: space-evenly;
+        padding-right: 0px;
+        padding-top: 20px;
+        padding-bottom: 35px; */
     }
-    h2{
+    #imageAcceuil{
+        margin-left: 0;
+    } 
+    #Contact{
+
+        margin :20px auto 20px; auto;
+
+    }
+/*    h2{
         margin-top: 0px;
     }
     .lienNav{
@@ -155,16 +188,20 @@
         left: 0px;
     }
 }
-@media(max-width: 675px){/* --------------------------------- width 675*/
-    #imageAcceuil,
+ */@media(max-width: 650px){/* --------------------------------- width 675*/
+     #imageAcceuil,
     #divSlide{
-        margin: 30px auto 30px auto;
-        width: 519px;
-        height: 367px;
-        left: 0px;
+
+        width: 500px;
+        height: 353px;
+
     } 
-    #Accueil{
+    #Chalet{
+        width: 500px;
+        height: 90px;
+/*    #Accueil{
         position: relative;
         top: 120px;
     }
 }
+ */
