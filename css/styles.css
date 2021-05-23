@@ -41,8 +41,8 @@ h1{
 /* --------------------------------- NavBar --------------------*/
 #page1{
     background-color: rgba(255, 235, 122, 0.8);
-    font-size: 126%;
-    box-shadow: 10px 10px 25px  rgb(53, 133, 187);
+    font-size: 130%;
+    box-shadow: 5px 5px 15px  rgb(255, 238, 83);
     cursor:auto;
 }
 h2 a{
@@ -55,12 +55,12 @@ h2 a{
     position: relative;
     width: 175px;
     height: 670px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     border-right: 3px rgb(53, 133, 187) solid;
     border-radius: 10px;
     padding-right: 0px;
     padding-top: 20px;
-    padding-bottom: 35px;
+    padding-bottom: 50px;
     margin: 0;
     box-shadow: 5px 5px 15px  rgb(53, 133, 187);
     line-height: 3.5rem;
@@ -78,13 +78,26 @@ h2 a{
     font-weight: 600;
     color: black;
     max-width: 100%;
-    transition: 0.4s;
 }
 .lienNav:hover{
+    transition: 0.4s;    
     background-color: rgba(255, 235, 122, 0.8);
     font-size: 126%;
     box-shadow: 10px 10px 25px  rgb(53, 133, 187);
     cursor: pointer;
+}
+#Contact{
+    background-color: rgba(167, 234, 255, 0.8);
+    border: solid rgb(186, 237, 253) 2px;
+    box-shadow: 5px 5px 15px  rgb(53, 133, 187);
+    transition: 0.2s;
+}
+
+#Contact:hover{
+    background-color: rgba(155, 225, 247, 0.9);
+    cursor: pointer;
+    box-shadow: 10px 10px 25px rgb(124, 179, 216);
+    font-size: 126%;
 }
 /* --------------------------------- Tourisme --------------------*/
  #Tourisme{
@@ -122,34 +135,6 @@ font-size: 1rem;
     font-size: 103%;
 }
 /* --------------------------------- Contact --------------------*/
-#Contact{
-    display: inline-block;
-    position: relative;
-    align-content: center;
-    justify-content: center;
-    vertical-align: middle;
-    width: 350px;
-    height: 60px;
-    margin: 15px auto 0 auto;
-    background-color: rgba(186, 237, 253, 0.8);
-    border: solid rgba(186, 237, 253, 0.7) 2px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px  rgb(53, 133, 187);
-    font-size: 1rem;
-    font-weight: 600;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-decoration: none;
-    transition: 0.2s;
-}
-#Contact:hover{
-    background-color: rgba(155, 225, 247, 0.9);
-    cursor: pointer;
-    box-shadow: 10px 10px 25px rgb(53, 133, 187);
-    font-size: 126%;
-    width: 357px;
-    height: 62px;
-}
-
 .pdf{
     display: inline-block;
     padding: 10px 5px;
@@ -167,7 +152,7 @@ font-size: 1rem;
 }
 .pdf:hover{
     background-color: rgba(255, 235, 122, 0.9);
-    font-size: 126%;
-    box-shadow: 10px 10px 25px  rgb(53, 133, 187);
+    font-size: 130%;
+    box-shadow: 3px 3px 5px  rgb(248, 237, 137);
     cursor: pointer;
 }

@@ -9,7 +9,7 @@
     }
 }
   @media(max-width: 1250px){/* --------------------------------- width 1250*/
-    #imageAcceuil,
+    .imageAcceuil,
     #divSlide,
     #imageCalendrier,
     #iframe{
@@ -18,7 +18,7 @@
     } 
 }
  @media(max-width: 1050px){/* --------------------------------- width 1050*/
-    #imageAcceuil,
+    .imageAcceuil,
     #divSlide,
     #imageCalendrier,
     #iframe{
@@ -27,7 +27,7 @@
     } 
 }
   @media(max-width: 950px){/* --------------------------------- width 950*/
-    #imageAcceuil,
+    .imageAcceuil,
     #divSlide,
     #imageCalendrier,
     #iframe{
@@ -43,7 +43,7 @@
     h2{
         margin-top: 0px;
     }
-     #divSlide{
+    #divSlide{
         top: 60px;
         margin-bottom: 60px;
     } 
@@ -72,8 +72,9 @@
         margin-bottom: 20px;
         line-height: 2rem;
         vertical-align: middle;
+        padding: 20px 20px 40px 20px;
     }
-    #imageAcceuil,
+    .imageAcceuil,
     #divSlide,
     #imageCalendrier,
     #iframe{
@@ -82,9 +83,6 @@
     #légende{
         height: 60px;
         margin-left: 0;
-    }
-    #Contact{
-        margin :20px auto 20px; auto;
     }
      #Tourisme{
          display: flex;
@@ -97,7 +95,7 @@
     }
 }
  @media(max-width: 650px){/* --------------------------------- width 675*/
-    #imageAcceuil,
+    .imageAcceuil,
     #divSlide,
     #imageCalendrier,
     #iframe{
