@@ -4,6 +4,12 @@
     box-shadow: 10px 10px 25px  rgb(53, 133, 187);
     cursor:auto;
 }
-#Contact{
-    margin: 15px auto 0 auto;
-}
+.imageAcceuil{
+    display: inline-block;
+    width: 910px;
+    height: 605px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px  rgb(53, 133, 187);
+    margin-left: 20px;
+} 

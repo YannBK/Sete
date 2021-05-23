@@ -6,13 +6,13 @@
 }
 #imageCalendrier{
     display: inline-block;
-    width: 806px;
-    height: 569px;
+    width: 910px;
+    height: 607px;
     position: relative;
     border-radius: 10px;
     box-shadow: 5px 5px 15px  rgb(53, 133, 187);
     margin-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     opacity: 0.9;
 } 
 #légende{
