@@ -11,7 +11,8 @@
   @media(max-width: 1250px){/* --------------------------------- width 1250*/
     #imageAcceuil,
     #divSlide,
-    #imageCalendrier{
+    #imageCalendrier,
+    #iframe{
         height: 569px;
         width: 806px;
     } 
@@ -19,7 +20,8 @@
  @media(max-width: 1050px){/* --------------------------------- width 1050*/
     #imageAcceuil,
     #divSlide,
-    #imageCalendrier{
+    #imageCalendrier,
+    #iframe{
         height: 506px;
         width: 715px;
     } 
@@ -27,7 +29,8 @@
   @media(max-width: 950px){/* --------------------------------- width 950*/
     #imageAcceuil,
     #divSlide,
-    #imageCalendrier{
+    #imageCalendrier,
+    #iframe{
         width: 627px;
         height: 443px;
     } 
@@ -72,7 +75,8 @@
     }
     #imageAcceuil,
     #divSlide,
-    #imageCalendrier{
+    #imageCalendrier,
+    #iframe{
         margin-left: 0;
     } 
     #légende{
@@ -95,7 +99,8 @@
  @media(max-width: 650px){/* --------------------------------- width 675*/
     #imageAcceuil,
     #divSlide,
-    #imageCalendrier{
+    #imageCalendrier,
+    #iframe{
         width: 500px;
         height: 353px;
     } 
