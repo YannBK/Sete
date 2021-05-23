@@ -39,16 +39,6 @@ h1{
     margin-left: 20px;
 } 
 /* --------------------------------- NavBar --------------------*/
-#page1{
-    background-color: rgba(255, 235, 122, 0.8);
-    font-size: 130%;
-    box-shadow: 5px 5px 15px  rgb(255, 238, 83);
-    cursor:auto;
-}
-h2 a{
-    text-decoration: none;
-    color: black;
-}
 #Chalet{
     display: flex;
     flex-direction: column;
@@ -86,15 +76,27 @@ h2 a{
     box-shadow: 10px 10px 25px  rgb(53, 133, 187);
     cursor: pointer;
 }
+#page1{
+    background-color: rgba(255, 235, 122, 0.8);
+    font-size: 130%;
+    box-shadow: 2px 2px 5px  rgb(255, 238, 83);
+    cursor:auto;
+}
+.page1{
+    background-color: rgba(255, 235, 122, 0.8);
+    font-size: 130%;
+    box-shadow: 2px 2px 5px  rgb(255, 238, 83);
+    cursor:auto;
+}
 #Contact{
-    background-color: rgba(167, 234, 255, 0.8);
+    background-color: rgba(167, 234, 255, 0.6);
     border: solid rgb(186, 237, 253) 2px;
     box-shadow: 5px 5px 15px  rgb(53, 133, 187);
     transition: 0.2s;
 }
 
 #Contact:hover{
-    background-color: rgba(155, 225, 247, 0.9);
+    background-color: rgba(105, 218, 252, 0.9);
     cursor: pointer;
     box-shadow: 10px 10px 25px rgb(124, 179, 216);
     font-size: 126%;
@@ -141,7 +143,7 @@ font-size: 1rem;
     border: solid rgb(248, 244, 223) 2px;
     text-decoration: none;
     margin: 15px 0.1rem 0 0.1rem;
-    background-color: rgba(255, 242, 169, 0.8);
+    background-color: rgba(255, 242, 172, 0.8);
     border-radius: 5px;
     font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -152,7 +154,7 @@ font-size: 1rem;
 }
 .pdf:hover{
     background-color: rgba(255, 235, 122, 0.9);
-    font-size: 130%;
+    font-size: 120%;
     box-shadow: 3px 3px 5px  rgb(248, 237, 137);
     cursor: pointer;
 }

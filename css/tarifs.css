@@ -1,7 +1,7 @@
 #tarifs{
     background-color: rgba(255, 235, 122, 0.8);
     font-size: 130%;
-    box-shadow: 5px 5px 15px  rgb(255, 238, 83);
+    box-shadow: 2px 2px 5px  rgb(255, 238, 83);
     cursor:auto;
 }
 #imageCalendrier{
@@ -38,18 +38,12 @@
     width: 60px;
     margin: auto 20px;
 }
-#legendRed{
-    background-color: red;
+#legend300{
+    background-color: rgb(204, 204, 153);
 }
-#legendBlue{
-    background-color: blue;
+#legend400{
+    background-color: rgb(255, 204, 153);
 }
-#legendGreen{
-    background-color: green;
-}
-#legendBrown{
-    background-color: brown;
-}
-#legendOrange{
-    background-color: orange;
+#legend500{
+    background-color: rgb(204, 153, 255);
 }
