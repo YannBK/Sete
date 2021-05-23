@@ -38,9 +38,11 @@ h1{
     margin-left: 20px;
 } 
 /* --------------------------------- NavBar --------------------*/
-h2{
-    font-size: 1.3rem;
-    margin-bottom: 10px;
+#page1{
+    background-color: rgba(255, 235, 122, 0.8);
+    font-size: 126%;
+    box-shadow: 10px 10px 25px  rgb(53, 133, 187);
+    cursor:auto;
 }
 h2 a{
     text-decoration: none;
