@@ -1,24 +1,22 @@
 
+
+//liste déroulante et hover sur les liens touristiques
+/* 
 const region = document.querySelector('#laRegion');
 const regions = document.getElementsByClassName('region');
 const btnRegion = document.getElementById('laRegion');
-const liens = document.getElementsByClassName('lienNav');
-
-//liste déroulente et hover sur les liens touristiques
 const hoverRegions = () => {
     for (let i = 0; i < regions.length; i++) {
         regions[i].style.display = "inline-block";
         btnRegion.classList.add('page1');
     }
 }
-
 const removeHoverRegions = () => {
     for (let i = 0; i < regions.length; i++) {
         regions[i].style.display = "none";
         btnRegion.classList.remove('page1');
     }
 }
-
 //eventListeners
 function apparition() {
     for (let i = 0; i < regions.length; i++) {
@@ -26,13 +24,15 @@ function apparition() {
         region.addEventListener("mouseleave", removeHoverRegions)
     }
 }
-
 function constance() {
     for (let i = 0; i < regions.length; i++) {
         regions[i].addEventListener("mouseenter", hoverRegions)
         regions[i].addEventListener("mouseleave", removeHoverRegions)
     }
-}
+} 
+apparition();
+constance(); 
+*/
 //TODO-------------enlever les class active et la rajouter seulement sur l'élément cliqué...la base-------------------------
 /* const clickNoRegions = () => {
     for (let i = 0; i < liens.length; i++) {
@@ -46,6 +46,7 @@ function clique() {
 clique();
  */
 //-----------------------------------
+const liens = document.getElementsByClassName('lienNav');
 function clique() {
 for (let j = 0; j < liens.length; j++) {
   liens[j].addEventListener("click", function() {
@@ -60,8 +61,7 @@ for (let j = 0; j < liens.length; j++) {
 }}
 //TODO----------------comprendre la différence et pourquoi ça marche ou pas ----------------------
 
-apparition();
-constance();
+
 clique();
 // ------------------------------------------Diapo 
 //Array d'images
