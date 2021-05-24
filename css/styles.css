@@ -10,7 +10,6 @@ body{
     font-size: 13px;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     text-align: center;
-
 }
 h1{
     font-size: 2rem;
@@ -20,15 +19,7 @@ h2{
     font-size: 1.5rem;
     margin: 1.5rem auto 1.5rem auto;
 }
-#nav_contenu{
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    z-index: 100;
-    margin: 0 2vw;
-}
+/* ------------------------------- div princ */
 .princ{
     display: flex;
     position:relative;
@@ -48,26 +39,29 @@ h2{
 #princAccueil{
     background: url("../Fichiers/beach-1852945_1920.jpg") no-repeat center;
 }
-#princDescription{
+#princDiapo{
     background-color: #99c1de;
 }
 #princPlan{
-    background-color: #bcd4e6;
+    background-color: #b6e1fc;
+}
+#princDescription{
+    background-color: #cae2f5;
 }
 #princLocalisation{
-    background-color: #c7dfec;
-}
-#princTarifs{
-    background-color: #d4ecff;
-}
-#princContact{
-    background-color: #a4cdeb;
-}
-#princDiapo{
-    background-color: #c0def0;
+    background-color: #d6eefc;
 }
 #princActivites{
-    background-color: #bcd4e6;
+    background-color: #d6eefc;
+}
+#princRegion{
+    background-color: #cae2f5;
+}
+#princTarifs{
+    background-color: #b6e1fc;
+}
+#princContact{
+    background-color: #99c1de;
 }
 .imageAcceuil{
     display: inline-block;
@@ -75,20 +69,27 @@ h2{
     height: 607px;
     position: relative;
     border-radius: 10px;
-    box-shadow: 5px 5px 15px  rgb(53, 133, 187);
+    box-shadow: 5px 5px 10px  rgb(102, 167, 211);
     margin: 5px auto 5px auto;
 } 
 /* --------------------------------- NavBar --------------------*/
+#nav_contenu{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    z-index: 100;
+    margin: 0 2vw;
+}
 #Chalet{
     display: flex;
     flex-direction: row;
-    /* position: relative; */
     width: 94vw;
     height: 5rem;
     justify-content: space-between;
-    border-right: 3px rgb(53, 133, 187) solid;
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px  rgb(53, 133, 187);
+    /* border-radius: 10px; */
+    /* box-shadow: 5px 5px 15px  rgb(53, 133, 187); */
     line-height: 3.5rem;
     background-color: transparent;
     padding: 0 1vw;
@@ -98,8 +99,8 @@ h2{
     border: solid rgb(248, 244, 223) 2px;
     text-decoration: none;
     margin: 0.7rem 0.1rem 0.7rem 0.1rem;
-    background-color: rgba(255, 242, 169, 0.7);
-    border-radius: 5px;
+    background-color: rgba(255, 242, 169, 0.8);
+    border-radius: 3px;
     font-size: 0.9rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
@@ -113,90 +114,25 @@ h2{
     box-shadow: 5px 5px 10px  rgb(53, 133, 187);
     cursor: pointer;
 }
-#page1{
-    background-color: rgba(255, 235, 122, 0.8);
-    font-size: 120%;
-    box-shadow: 2px 2px 5px  rgb(255, 238, 83);
-    cursor:auto;
-}
 .active{
-    background-color: rgba(255, 235, 122, 0.8);
+    background-color: rgba(255, 231, 93, 0.8);
     font-size: 120%;
-    box-shadow: 2px 2px 5px  rgb(255, 238, 83);
+    box-shadow: 5px 5px 10px  rgb(53, 133, 187);
     cursor:auto;
 }
 #Contact{
     background-color: rgba(167, 234, 255, 0.6);
     border: solid rgb(186, 237, 253) 2px;
-    box-shadow: 5px 5px 15px  rgb(53, 133, 187);
-    transition: 0.2s;
+    box-shadow: 5px 5px 10px  rgb(102, 167, 211);
+    transition: 0.3s;
 }
-
 #Contact:hover{
-    background-color: rgba(105, 218, 252, 0.9);
+    background-color: rgba(89, 215, 253, 0.9);
     cursor: pointer;
-    box-shadow: 10px 10px 25px rgb(124, 179, 216);
-    font-size: 126%;
-}
-/* --------------------------------- Tourisme --------------------*/
- #Tourisme{
-position: absolute;
-right: 34px;
-top: 70px;
-z-index: 100;
-font-size: 1rem;
-}
-#Tourisme a{
-    text-decoration: none;
-}
-.region{
-    display: none;
-    height: 60px;
-    width: 110px;
-    margin: -3px;
-    padding: 0;
-    font-size: 1rem;
-    align-content: center;
-    justify-content: center;
-    border: solid rgba(186, 237, 253, 0.7) 1px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px  rgb(53, 133, 187);
-    background-color: rgba(186, 237, 253, 0.6);
-    font-weight: 600;
-    vertical-align: middle;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    transition: 0.4s;
-}
-.region:hover{
-    background-color: rgba(186, 237, 253, 0.9);
-    cursor: pointer;
-    box-shadow: 10px 10px 25px  rgb(53, 133, 187);
-    font-size: 103%;
-}
-/* --------------------------------- Contact --------------------*/
-.pdf{
-    display: inline-block;
-    padding: 10px 5px;
-    border: solid rgb(248, 244, 223) 2px;
-    text-decoration: none;
-    margin: 0px 0.1rem 0 0.1rem;
-    background-color: rgba(255, 242, 172, 0.8);
-    border-radius: 5px;
-    font-size: 1rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 600;
-    color: black;
-    max-width: 100%;
-    transition: 0.2s;
-}
-.pdf:hover{
-    background-color: rgba(255, 235, 122, 0.9);
-    cursor: pointer;
-    transition: 0.4s;    
-    font-size: 125%;
     box-shadow: 5px 5px 10px  rgb(53, 133, 187);
+    font-size: 120%;
 }
-/* ---------------------------------------- Diapo */
+ /* ---------------------------------------- Diapo */
 #divSlide{
     display: block;
     position: relative;
@@ -212,8 +148,8 @@ font-size: 1rem;
     border-radius: 10px;
     border: 1px solid black;
 }
- /* ---------------- ----------- boutons controle */
-.btn{
+/* ---------------- -------------- Diapo boutons */
+ .btn{
     position: absolute;
     top: 50%;
     width: auto;
@@ -278,14 +214,12 @@ font-size: 1rem;
     font-weight: bold;
     margin-left: 20px;
 }
-
 .legend{
     display: inline-block;
     height: 20px;
     width: 60px;
     margin: 50px 20px 0px 20px; 
 }
-
 #legend300{
     background-color: rgb(204, 204, 153);
     margin: 20px 20px 0px 20px; 
@@ -298,4 +232,67 @@ font-size: 1rem;
 }
 #legendRéservé{
     background-color: rgb(255, 153, 153);
+}
+/* --------------------------------- Pdf --------------------*/
+.pdf{
+    display: inline-block;
+    padding: 10px 5px;
+    border: solid rgb(248, 244, 223) 2px;
+    text-decoration: none;
+    margin: 0px 0.1rem 0 0.1rem;
+    background-color: rgba(255, 242, 172, 0.8);
+    border-radius: 3px;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    color: black;
+    max-width: 100%;
+    transition: 0.2s;
+}
+.pdf:hover{
+    background-color: rgba(255, 235, 122, 0.9);
+    cursor: pointer;
+    transition: 0.4s;    
+    font-size: 125%;
+    box-shadow: 5px 5px 10px  rgb(53, 133, 187);
+}
+/* --------------------------------- Tourisme --------------------*/
+#Tourisme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 910px;
+    height: 607px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px  rgb(102, 167, 211);
+    margin: 5px auto 5px auto;
+}
+#Tourisme a{
+    text-decoration: none;
+}
+.region{
+    display: block;
+     /*   height: 60px;
+        width: 110px;
+        margin: -3px;
+        padding: 0;
+        font-size: 1rem;
+        align-content: center;
+        justify-content: center;
+        border: solid rgba(186, 237, 253, 0.7) 1px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px  rgb(53, 133, 187);
+        background-color: rgba(186, 237, 253, 0.6);
+        font-weight: 600;
+        vertical-align: middle;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        transition: 0.4s; */
+}
+.region:hover{
+        /* background-color: rgba(186, 237, 253, 0.9);
+        cursor: pointer;
+        box-shadow: 10px 10px 25px  rgb(53, 133, 187);
+        font-size: 103%; */
 }
