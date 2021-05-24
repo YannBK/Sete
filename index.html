@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <title>Location de vacances à Sète</title>
     <meta charset=utf-8>
@@ -9,52 +10,114 @@
     <!-- 
         <meta name="Keywords" content="Location, Vacances, Appartement, Balcon, Terrasse, Mer, Plage, Occitanie, Hérault, Sète">
 -->
-
     <!--CSS-->
     <link href="css/stylesreset.css" rel="stylesheet">
-    <!--lier la feuille de style-->
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/media.css" rel="stylesheet">
 
 </head>
+
 <body>
 
     <main>
-        <h1>Le lieu idéal pour vos vacances</h1>
-        
+
         <div id="nav_contenu">
             <nav id="Chalet">
-                <a href="#" class="lienNav" id="page1">Accueil</a>
-                <a href="html/descriptif.html" class="lienNav">Descriptif</a>
-                <a href="html/plan.html" class="lienNav">Plan</a>
-                <a href="html/localisation.html" class="lienNav">Localisation</a>
-                <!--                 <a href="Fichiers/pdf/implantation-chalet.pdf" target="_blank" class="lienNav">Implantation</a>
-                -->
-                <a href="html/tarifs.html" class="lienNav">Tarifs</a>
-                <a href="html/disponibilités.html" class="lienNav">Disponibilités</a>
-                <a href="html/diapo.html" class="lienNav">Photos</a>
-                <a href="html/activités.html" class="lienNav">Activités</a>
+                <a href="#princAccueil" class="lienNav active">Accueil</a>
+                <a href="#princDiapo" class="lienNav">Photos</a>
+                <a href="#princPlan" class="lienNav">Plan</a>
+                <a href="#princDescription" class="lienNav">Descriptif</a>
+                <a href="#princLocalisation" class="lienNav">Localisation</a>
+                <a href="#princActivites" class="lienNav">Activités</a>
+                <a href="#princTarifs" class="lienNav">Tarifs</a>
                 <div class="lienNav" id="laRegion">
                     <p>La région</p>
                 </div>
                 <div id="Tourisme">
                     <a href="https://www.tourisme-sete.com/" target="_blank"><button class="region"
-                        id="Hourtin">Sète</button></a>
-                        <a href="https://www.herault-tourisme.com/fr/" target="_blank"><button class="region" id="Medoc">L'Hérault</button></a>
-                        <a href="https://tourisme-occitanie.com/" target="_blank"><button class="region" id="Gironde">L'Occitanie</button></a>
-                    </div>                    
-                <a href="mailto:akryjnid888@hotmail.fr"id="Contact" class="lienNav">Contact</a>
-                </nav>
-                
-                <div class="princ">
-                    <img src="Fichiers/sete/1_Vue_mer.JPG" class="imageAcceuil" alt="Vue mer de l'appartement">
-
-                    
+                            id="Hourtin">Sète</button></a>
+                    <a href="https://www.herault-tourisme.com/fr/" target="_blank"><button class="region"
+                            id="Medoc">L'Hérault</button></a>
+                    <a href="https://tourisme-occitanie.com/" target="_blank"><button class="region"
+                            id="Gironde">L'Occitanie</button></a>
                 </div>
+                <a href="#princContact" id="Contact" class="lienNav">Contact</a>
+            </nav>
         </div>
-        
+
+        <div class="princ" id="princAccueil">
+            <h1>Le lieu idéal pour vos vacances</h1>
+            <img src="Fichiers/sete/1_Vue_mer.JPG" class="imageAcceuil" alt="Vue mer de l'appartement">
+        </div>
+
+        <div class="princ" id="princDiapo">
+            <h2>Les photos</h2>
+            <div id="divSlide">
+                <img src="Fichiers/sete/1_Vue_mer.jpg" id="Slide" name="Slide" alt="Diaporama de l'appartement">
+                <button class='btn' id="prev-btn">&#10094;</button>
+                <button class='btn' id="stop">l l</button>
+                <button class='btn' id="play">&#9658;</button>
+                <button class='btn' id="next-btn">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="princ" id="princPlan">
+            <h2>Plan du logement</h2>
+            <img src="Fichiers/sete/1_Vue_mer.JPG" class="imageAcceuil" alt="Vue mer de l'appartement">
+            <a href="" class="pdf">Téléchargez le Pdf</a>
+        </div>
+
+        <div class="princ" id="princDescription">
+            <h2>Description du logement</h2>
+            <img src="Fichiers/sete/1_Vue_mer.JPG" class="imageAcceuil" alt="Vue mer de l'appartement">
+            <a href="" class="pdf">Téléchargez le Pdf</a>
+        </div>
+
+        <div class="princ" id="princLocalisation">
+            <h2>Localisation</h2>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1UmbynYHGbrrBKrGoWrgyKuiWTVy4nXuQ&hl=fr"
+                class="imageAcceuil" id="iframe"></iframe>
+            <a href="" class="pdf">Téléchargez le Pdf</a>
+        </div>
+
+        <div class="princ" id=princActivites>
+            <h2>Loisirs</h2>
+            <img src="Fichiers/sete/1_Vue_mer.JPG" class="imageAcceuil" alt="Vue mer de l'appartement">
+            <a href="" class="pdf">Téléchargez le Pdf</a>
+        </div>
+
+        <div class="princ" id="princTarifs">
+            <h2>Tarifs</h2>
+            <img src="Fichiers/calendrier/Calendrier_tarifs.JPG" class="imageAcceuil" alt="Vue mer de l'appartement">
+            <section id="légende">
+                <div class="legend" id="legend300"></div>
+                <p>300€ / semaine</p>
+                <div class="legend" id="legend400"></div>
+                <p>400€ / semaine</p>
+                <div class="legend" id="legend500"></div>
+                <p>500€ / semaine</p>
+                <div class="legend" id="legendRéservé"></div>
+                <p>Réservé</p>
+            </section>
+            <a href="" class="pdf">Téléchargez le Pdf</a>
+        </div>
+
+        <div class="princ" id="princContact">
+            <h2>Contact</h2>
+            <img src="Fichiers/calendrier/Calendrier_disponibilités.JPG" class="imageAcceuil"
+                alt="Vue mer de l'appartement">
+            <section id="contact">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, vitae magnam exercitationem nobis
+                    quasi provident explicabo pariatur. Eos deleniti delectus voluptatem assumenda impedit excepturi
+                    earum quasi, voluptate minus ratione eum.
+                </p>
+            </section>
+        </div>
+
+
         <script src="js/script_index.js"></script>
     </main>
-    
+
 </body>
+
 </html>

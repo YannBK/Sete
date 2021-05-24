@@ -1,15 +1,35 @@
 /* /* /* --------------------------------- Media --------------------*/
 @media(max-height: 800px){/* ------------------------- height 900*/
-    body{
-        transform: scale(0.90);
+     body{
+        /* transform: scale(0.90); */
         margin: 0px;
     }
+    .imageAcceuil,
+    #divSlide{
+        transform: scale(0.80);
+        margin: 10px auto 10px auto;
+        position: absolute;
+        top:10%;
+    }
     h1{
-        margin: 0 0 2rem 0;
+        margin: 2rem 0 0rem 0;
+    }
+    h2{
+        margin: 3.5rem auto 0rem auto;
+        position:absolute;
+        top:2rem;
+    }
+    #nav_contenu{
+transform: scale(0.8);
+    }
+    .pdf{
+        margin: 0px 0.1rem 0 0.1rem;
+        position:absolute;
+        bottom:30px;
     }
 }
-  @media(max-width: 1250px){/* --------------------------------- width 1250*/
-    .imageAcceuil,
+@media(max-width: 1250px){/* --------------------------------- width 1250*/
+/*     .imageAcceuil,
     #divSlide,
     #imageCalendrier,
     #iframe{
@@ -20,8 +40,8 @@
         max-width: 806px;
     }
 }
- @media(max-width: 1050px){/* --------------------------------- width 1050*/
-    .imageAcceuil,
+ */ @media(max-width: 1050px){/* --------------------------------- width 1050*/
+/*     .imageAcceuil,
     #divSlide,
     #imageCalendrier,
     #iframe{
@@ -32,8 +52,8 @@
         max-width: 715px;
     }
 }
-  @media(max-width: 950px){/* --------------------------------- width 950*/
-    .imageAcceuil,
+ */  @media(max-width: 950px){/* --------------------------------- width 950*/
+/*     .imageAcceuil,
     #divSlide,
     #imageCalendrier,
     #iframe{
@@ -64,8 +84,8 @@
         margin-top: 5px;
     }
 }
- @media(max-width: 850px){/* --------------------------------- width 750*/
-    #nav_contenu{
+ */ @media(max-width: 850px){/* --------------------------------- width 750*/
+/*     #nav_contenu{
         display:flex;
         flex-direction: column;
         justify-content:space-evenly;
@@ -103,8 +123,8 @@
         height: 40px;
     }
 }
- @media(max-width: 650px){/* --------------------------------- width 675*/
-    .imageAcceuil,
+ */ @media(max-width: 650px){/* --------------------------------- width 675*/
+/*     .imageAcceuil,
     #divSlide,
     #imageCalendrier,
     #iframe{
@@ -126,4 +146,4 @@
         left: 100px;
     }
 }
- 
+ */ 
