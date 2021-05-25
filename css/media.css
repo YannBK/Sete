@@ -112,17 +112,17 @@
 @media(max-width: 650px){/* --------------------------------- width 675*/
     .imageAcceuil,
      #iframe{
-        width: 500px;
+        width: 480px;
         height: 353px;
     } 
     #Slide{
-        max-width: 500px
+        max-width: 480px
     }
     #légende{
-        width: 500px;
+        width: 480px;
     }
     h1{
-        font-size: 1.75rem;
+        font-size: 1.6rem;
     }
     #légende{
         font-size: 1rem;

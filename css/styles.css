@@ -1,6 +1,9 @@
-
+html{scroll-behavior:smooth;}
 body{
     display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
     flex-direction: row;
     align-items: center;
     align-content: center;
@@ -33,7 +36,7 @@ h2{
     align-content: center;
     vertical-align: middle;
     height: 100vh;
-    width: 98.6vw;
+    width: 100vw;
     background-position: top;
     background-size: cover;
 }
@@ -41,36 +44,36 @@ h2{
     background: url("../Fichiers/beach-1852945_1920.jpg") no-repeat center;
 }
 #princDiapo{
-    background-color: #99c1de;
+    background: linear-gradient(#00b4d8, #48cae4);
 }
 #princPlan{
-    background-color: #b6e1fc;
+    background: linear-gradient(#48cae4, #90e0ef);
 }
 #princDescription{
-    background-color: #cae2f5;
+    background: linear-gradient(#90e0ef, #ade8f4);
 }
 #princLocalisation{
-    background-color: #d6eefc;
+    background: linear-gradient(#ade8f4,#d6f4fa);
 }
 #princActivites{
-    background-color: #d6eefc;
+    background: linear-gradient(#d6f4fa, #ade8f4);
 }
 #princRegion{
-    background-color: #cae2f5;
+    background: linear-gradient( #ade8f4, #90e0ef);
 }
 #princTarifs{
-    background-color: #b6e1fc;
+    background: linear-gradient(#90e0ef, #48cae4);
 }
 #princContact{
-    background-color: #99c1de;
+    background: linear-gradient(#48cae4, #00b4d8);
 }
 .imageAcceuil{
     display: inline-block;
     width: 910px;
     height: 607px;
     position: relative;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px  rgb(102, 167, 211);
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px  rgb(102, 167, 211);
     margin: 5px auto 5px auto;
 } 
 /* --------------------------------- NavBar --------------------*/
@@ -110,7 +113,7 @@ h2{
     transition: 0.4s;    
     background-color: rgba(255, 235, 122, 0.8);
     font-size: 115%;
-    box-shadow: 5px 5px 10px  rgb(53, 133, 187);
+    box-shadow: 3px 3px 10px  rgb(53, 133, 187);
     cursor: pointer;
 }
 .active{
@@ -119,16 +122,31 @@ h2{
     box-shadow: 5px 5px 10px  rgb(53, 133, 187);
     cursor:auto;
 }
-#Contact{
+.lienNavCont{
     background-color: rgba(167, 234, 255, 0.6);
     border: solid rgb(186, 237, 253) 2px;
     box-shadow: 5px 5px 10px  rgb(102, 167, 211);
     transition: 0.3s;
+    padding: 10px auto;
+    text-decoration: none;
+    margin: 0.7rem 0.1rem 0.7rem 0.1rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    color: black;
+    width: 7rem;
 }
 #Contact:hover{
     background-color: rgba(89, 215, 253, 0.9);
     cursor: pointer;
-    box-shadow: 5px 5px 10px  rgb(53, 133, 187);
+    box-shadow: 3px 3px 10px  rgb(248, 234, 154);
+    font-size: 120%;
+}
+.contactActive{
+    background-color: rgba(89, 215, 253, 0.9);
+    cursor: pointer;
+    box-shadow: 3px 3px 10px  rgb(248, 234, 154);
     font-size: 120%;
 }
  /* ---------------------------------------- Diapo */

@@ -1,6 +1,59 @@
 
 
-//liste déroulante et hover sur les liens touristiques
+
+//TODO scroll smooth jusqu'à une ancre ... tout marche... sur Chrome (et les autres?) il faut permettre le smooth scrolling (ça évite de se prendre la tête 2h parce que le scroll n'est pas smooth du tout) => Chrome dans la barre url :  chrome://flags/#smooth-scrolling ; Firefox ; about:preferences . MAIS il y a plus simple...dans CSS html{scroll-behavior:smooth;}...
+
+
+ 
+/*  const target = document.getElementById('princLocalisation') //cible
+button = document.getElementById('acces'); //btn
+
+button.addEventListener('click', function(){
+
+target.scrollIntoView({
+  block: 'start',
+  behavior: 'smooth',
+  inline: 'nearest'
+});
+
+});   */
+
+/*  button = document.getElementById('acces'); //btn
+function scrollToTargetAdjusted(){
+    var element = document.getElementById('princLocalisation');
+    var headerOffset = 45;
+    var elementPosition = element.getBoundingClientRect().top;
+    var offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+         top: offsetPosition,
+         behavior: "smooth"
+    });
+}
+button.addEventListener('click', scrollToTargetAdjusted); 
+ */
+
+/*  const link = document.getElementById('acces');
+const anchor = document.getElementById('princLocalisation');
+ 
+link.addEventListener('click', e => {
+   e.preventDefault();
+ 
+   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+   const rect = anchor.getBoundingClientRect();
+ 
+   // Pour se placer un peu au-dessus, choisir un nombre
+   const diff = 80;
+   
+   scroll({
+      top: rect.top + scrollTop - diff,
+      behavior: 'smooth'
+   });
+}); 
+ */
+
+
+//TODOliste déroulante et hover sur les liens touristiques
 /* 
 const region = document.querySelector('#laRegion');
 const regions = document.getElementsByClassName('region');
@@ -46,23 +99,33 @@ function clique() {
 clique();
  */
 //-----------------------------------
-const liens = document.getElementsByClassName('lienNav');
+ const liens = document.getElementsByClassName('lienNav');
+ const liensCont = document.getElementById('Contact');
+ 
 function clique() {
 for (let j = 0; j < liens.length; j++) {
   liens[j].addEventListener("click", function() {
-    let current = document.getElementsByClassName("active");
-    // If there's no active class
+    let current = document.getElementsByClassName(" active");
     if (current.length > 0) {
-      current[0].className = current[0].className.replace(" active", ""); //TODO pourquoi [0]
+      current[0].className = current[0].className.replace(" active", ""); //? pourquoi [0] =>pcq y en a qu'1
     }
-    // Add the active class to the current/clicked button
-    this.className += " active"; //TODO d'où le this fait référence au btn cliqué?
+	liensCont.classList.remove('contactActive'); 
+    this.className += " active"; //? d'où le this fait référence au btn cliqué?
   });
 }}
+
+//bouton contact actif
+function goo(){
+	liensCont.addEventListener("click", function() {
+		liensCont.classList.add('contactActive');
+  });
+}
+
+goo();
+clique();
 //TODO----------------comprendre la différence et pourquoi ça marche ou pas ----------------------
 
 
-clique();
 // ------------------------------------------Diapo 
 //Array d'images
 const Images = ["Fichiers/sete/1_Vue_mer.jpg",
