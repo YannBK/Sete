@@ -101,7 +101,7 @@ h2{
     border: solid rgb(248, 244, 223) 2px;
     text-decoration: none;
     margin: 0.7rem 0.1rem 0.7rem 0.1rem;
-    background-color: rgba(255, 242, 169, 0.8);
+    background-color: rgba(255, 248, 180, 0.9);
     border-radius: 3px;
     font-size: 0.9rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -111,13 +111,13 @@ h2{
 }
 .lienNav:hover{
     transition: 0.4s;    
-    background-color: rgba(255, 235, 122, 0.8);
+    background-color: rgba(255, 231, 93, 0.9);
     font-size: 115%;
     box-shadow: 3px 3px 10px  rgb(53, 133, 187);
     cursor: pointer;
 }
 .active{
-    background-color: rgba(255, 231, 93, 0.8);
+    background-color: rgba(255, 231, 93);
     font-size: 120%;
     box-shadow: 5px 5px 10px  rgb(53, 133, 187);
     cursor:auto;
@@ -125,7 +125,7 @@ h2{
 .lienNavCont{
     background-color: rgba(167, 234, 255, 0.6);
     border: solid rgb(186, 237, 253) 2px;
-    box-shadow: 5px 5px 10px  rgb(102, 167, 211);
+    box-shadow: 3px 3px 10px  rgb(102, 167, 211);
     transition: 0.3s;
     padding: 10px auto;
     text-decoration: none;
@@ -293,3 +293,29 @@ h2{
 .region{
     display: block;
 }
+
+
+.infobulle {
+    position: relative;  /* les .infobulle deviennent référents */
+  }
+  
+  /* on génère un élément :after lors du survol et du focus :*/
+  
+  .infobulle:hover::after,
+  .infobulle:focus::after {
+    content: attr(aria-label);  /* on affiche aria-label */
+    position: absolute;
+    bottom: -4.4em;
+    left: 50%;
+    transform: translateX(-50%); /* on centre horizontalement  */
+    z-index: 1; /* pour s'afficher au dessus des éléments en position relative */
+    /* white-space: nowrap;  on interdit le retour à la ligne */
+    color:black;
+    font-size: 1.9rem;
+    border: rgb(248, 244, 223) solid 1px;
+    padding: 30px 5px;
+    background-color:cornsilk;
+    border-radius: 10px;
+    width: 20rem;
+  }
+
