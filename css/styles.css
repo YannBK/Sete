@@ -271,17 +271,25 @@ h2{
 /* --------------------------------- Tourisme --------------------*/
 #Tourisme{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: #d6eefc;
 }
+#Tourisme div{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 45%;
+    width: 45%;
+    vertical-align: middle;
+}
 #Tourisme a{
-    text-decoration: none;
+    transform: scale(0.5);
 }
 .region{
     display: block;
-}
-.region:hover{
-
 }

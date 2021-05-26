@@ -88,7 +88,7 @@
         margin: 0 20px; 
     }
 }
-   @media(max-width: 830px){/* --------------------------------- width 830*/
+   @media(max-width: 855px){/* --------------------------------- width 855*/
     .imageAcceuil,
      #iframe{
         width: 627px;
