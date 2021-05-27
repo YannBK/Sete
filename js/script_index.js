@@ -1,130 +1,66 @@
 
+//  ------- activer / désactiver class avec le scroll ----------
+const liens = document.getElementsByClassName('lienNav');
+let current = document.getElementsByClassName(" active");
+const btnAccueil = document.getElementById('btnAccueil')
+const btnDiapo = document.getElementById('btnDiapo')
+const btnPlan = document.getElementById('btnPlan')
+const btnDescription = document.getElementById('btnDescription')
+const btnLocalisation = document.getElementById('btnLocalisation')
+const btnActivites = document.getElementById('btnActivites')
+const btnRegion = document.getElementById('btnRegion')
+const btnTarifs = document.getElementById('btnTarifs')
+const btnContact = document.getElementById('btnContact');
 
+ function removeActive() {
+	if (current.length > 0) {
+		current[0].className = current[0].className.replace(" active", "");
+	  }
+	  btnContact.classList.remove('contactActive'); 
+ }
 
-//TODO scroll smooth jusqu'à une ancre ... tout marche... sur Chrome (et les autres?) il faut permettre le smooth scrolling (ça évite de se prendre la tête 2h parce que le scroll n'est pas smooth du tout) => Chrome dans la barre url :  chrome://flags/#smooth-scrolling ; Firefox ; about:preferences . MAIS il y a plus simple...dans CSS html{scroll-behavior:smooth;}...
+const hauteur = document.documentElement.clientHeight;
+window.addEventListener('scroll', scrollBtn)
 
-
- 
-/*  const target = document.getElementById('princLocalisation') //cible
-button = document.getElementById('acces'); //btn
-
-button.addEventListener('click', function(){
-
-target.scrollIntoView({
-  block: 'start',
-  behavior: 'smooth',
-  inline: 'nearest'
-});
-
-});   */
-
-/*  button = document.getElementById('acces'); //btn
-function scrollToTargetAdjusted(){
-    var element = document.getElementById('princLocalisation');
-    var headerOffset = 45;
-    var elementPosition = element.getBoundingClientRect().top;
-    var offsetPosition = elementPosition - headerOffset;
-
-    window.scrollTo({
-         top: offsetPosition,
-         behavior: "smooth"
-    });
+function scrollBtn() {
+	let position = window.scrollY;
+	if(position < (hauteur -125)){
+    	removeActive();
+		btnAccueil.className += " active";
+	}
+	else if((hauteur -125) < position && position < (hauteur*2 -125)){
+    	removeActive();
+		btnDiapo.className += " active";
+	}
+	else if((hauteur*2 -125) < position && position < (hauteur*3 -125)){
+    	removeActive();
+		btnPlan.className += " active";
+	}
+	else if((hauteur*3 -125) < position && position < (hauteur*4 -125)){
+    	removeActive();
+		btnDescription.className += " active";
+	}
+	else if((hauteur*4 -125) < position && position < (hauteur*5 -125)){
+    	removeActive();
+		btnLocalisation.className += " active";
+	}
+	else if((hauteur*5 -125) < position && position < (hauteur*6 -125)){
+    	removeActive();
+		btnActivites.className += " active";
+	}
+	else if((hauteur*6 -125) < position && position < (hauteur*7 -125)){
+    	removeActive();
+		btnRegion.className += " active";
+	}
+	else if((hauteur*7 -125) < position && position < (hauteur*8 -125)){
+    	removeActive();
+		btnTarifs.className += " active";
+	}
+	else if((hauteur*8 -125) < position){
+    	removeActive();
+		btnContact.classList.add('contactActive');
+	}
 }
-button.addEventListener('click', scrollToTargetAdjusted); 
- */
-
-/*  const link = document.getElementById('acces');
-const anchor = document.getElementById('princLocalisation');
- 
-link.addEventListener('click', e => {
-   e.preventDefault();
- 
-   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-   const rect = anchor.getBoundingClientRect();
- 
-   // Pour se placer un peu au-dessus, choisir un nombre
-   const diff = 80;
-   
-   scroll({
-      top: rect.top + scrollTop - diff,
-      behavior: 'smooth'
-   });
-}); 
- */
-
-
-//TODOliste déroulante et hover sur les liens touristiques
-/* 
-const region = document.querySelector('#laRegion');
-const regions = document.getElementsByClassName('region');
-const btnRegion = document.getElementById('laRegion');
-const hoverRegions = () => {
-    for (let i = 0; i < regions.length; i++) {
-        regions[i].style.display = "inline-block";
-        btnRegion.classList.add('page1');
-    }
-}
-const removeHoverRegions = () => {
-    for (let i = 0; i < regions.length; i++) {
-        regions[i].style.display = "none";
-        btnRegion.classList.remove('page1');
-    }
-}
-//eventListeners
-function apparition() {
-    for (let i = 0; i < regions.length; i++) {
-        region.addEventListener("mouseenter", hoverRegions)
-        region.addEventListener("mouseleave", removeHoverRegions)
-    }
-}
-function constance() {
-    for (let i = 0; i < regions.length; i++) {
-        regions[i].addEventListener("mouseenter", hoverRegions)
-        regions[i].addEventListener("mouseleave", removeHoverRegions)
-    }
-} 
-apparition();
-constance(); 
-*/
-//TODO-------------enlever les class active et la rajouter seulement sur l'élément cliqué...la base-------------------------
-/* const clickNoRegions = () => {
-    for (let i = 0; i < liens.length; i++) {
-        liens[i].classList.remove('active');
-		this.liens[i].classList.add('active');
-    }
-} 
-function clique() {
-	clickNoRegions();
-}
-clique();
- */
-//-----------------------------------
- const liens = document.getElementsByClassName('lienNav');
- const liensCont = document.getElementById('Contact');
- 
-function clique() {
-for (let j = 0; j < liens.length; j++) {
-  liens[j].addEventListener("click", function() {
-    let current = document.getElementsByClassName(" active");
-    if (current.length > 0) {
-      current[0].className = current[0].className.replace(" active", ""); //? pourquoi [0] =>pcq y en a qu'1
-    }
-	liensCont.classList.remove('contactActive'); 
-    this.className += " active"; //? d'où le this fait référence au btn cliqué?
-  });
-}}
-
-//bouton contact actif
-function goo(){
-	liensCont.addEventListener("click", function() {
-		liensCont.classList.add('contactActive');
-  });
-}
-
-goo();
-clique();
-//TODO----------------comprendre la différence et pourquoi ça marche ou pas ----------------------
-
 
 // ------------------------------------------Diapo 
 //Array d'images

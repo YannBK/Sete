@@ -44,28 +44,28 @@ h2{
     background: url("../Fichiers/beach-1852945_1920.jpg") no-repeat center;
 }
 #princDiapo{
-    background: linear-gradient(#00b4d8, #48cae4);
-}
-#princPlan{
-    background: linear-gradient(#48cae4, #90e0ef);
-}
-#princDescription{
-    background: linear-gradient(#90e0ef, #ade8f4);
-}
-#princLocalisation{
-    background: linear-gradient(#ade8f4,#d6f4fa);
-}
-#princActivites{
     background: linear-gradient(#d6f4fa, #ade8f4);
 }
-#princRegion{
-    background: linear-gradient( #ade8f4, #90e0ef);
+#princPlan{
+    background: linear-gradient(#ade8f4, #90e0ef);
 }
-#princTarifs{
+#princDescription{
     background: linear-gradient(#90e0ef, #48cae4);
 }
+#princLocalisation{
+    background: linear-gradient(#48cae4,#00b4d8);
+}
+#princActivites{
+    background: linear-gradient(#00b4d8, #48cae4);
+}
+#princRegion{
+    background: linear-gradient(#48cae4, #90e0ef);
+}
+#princTarifs{
+    background: linear-gradient(#90e0ef, #ade8f4);
+}
 #princContact{
-    background: linear-gradient(#48cae4, #00b4d8);
+    background: linear-gradient(#ade8f4,#d6f4fa);
 }
 .imageAcceuil{
     display: inline-block;
