@@ -64,7 +64,8 @@ function scrollBtn() {
 
 // ------------------------------------------Diapo 
 //Array d'images
-const Images = ["Fichiers/sete/1_Vue_mer.jpg",
+const Images = [
+	"Fichiers/sete/1_Vue_mer.jpg",
 	"Fichiers/sete/2_Mont_Saint_Clair.jpg",
 	"Fichiers/sete/3_Mont_Saint_Clair.JPG",
 	"Fichiers/sete/4_chambre_cabine.JPG",
@@ -86,7 +87,8 @@ const Images = ["Fichiers/sete/1_Vue_mer.jpg",
 	"Fichiers/sete/20_lit_2.jpg",
 	"Fichiers/sete/21_résidence.jpg",
 	"Fichiers/sete/22_résidence2.jpg",
-	"Fichiers/sete/23_salon_cuisine.jpg"];
+	"Fichiers/sete/23_salon_cuisine.jpg"
+];
 let arrLen = Images.length - 1
 
 //changement automatique + manuel

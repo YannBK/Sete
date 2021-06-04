@@ -22,7 +22,9 @@
         margin: 1rem auto 5px auto;  
     }
     h1{
-        margin: 8rem auto 0 auto;
+        margin: 3.5rem auto 1rem auto;
+        position:absolute;
+        top:2rem;
     }
     h2{
         margin: 3.5rem auto 1rem auto;
@@ -34,8 +36,7 @@
     }
     .pdf{
         margin: 0px 0.1rem 0 0.1rem;
-        position: absolute;
-        bottom: 30px;
+        bottom: 50px;
     }
     #légende{
         height: 70vh;
@@ -129,6 +130,15 @@
     }
     .legend{
         margin: 0px 10px 0px 20px; 
+    }
+    #Tourisme a{
+        transform: scale(0.4);
+    }
+    .lienNav{
+        margin: 0.2rem 0 0.2rem 0;
+    }
+    .lienNavCont{
+        margin: 0.2rem 0 0.2rem 0;
     }
 }
   

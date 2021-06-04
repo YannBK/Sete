@@ -112,14 +112,14 @@ h2{
 }
 .lienNav:hover{
     transition: 0.4s;    
-    background-color: rgba(255, 231, 93, 0.9);
+    background-color: rgba(255, 248, 100, 0.9);
     font-size: 115%;
     box-shadow: 3px 3px 10px  rgb(53, 133, 187);
     cursor: pointer;
 }
 .active{
     transition: 0.4s;
-    background-color: rgba(255, 231, 93);
+    background-color: rgba(255, 248, 100);
     box-shadow: 5px 5px 10px  rgb(53, 133, 187);
     font-size: 115%;
     cursor:auto;
@@ -250,10 +250,12 @@ h2{
 /* --------------------------------- Pdf --------------------*/
 .pdf{
     display: inline-block;
+    position:absolute;
+    bottom:50px;
     padding: 10px 5px;
     border: solid rgb(248, 244, 223) 2px;
     text-decoration: none;
-    background-color: rgba(255, 242, 172, 0.8);
+    background-color: rgba(255, 248, 180, 0.9);
     border-radius: 3px;
     font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -264,7 +266,7 @@ h2{
 
 }
 .pdf:hover{
-    background-color: rgba(255, 235, 122, 0.9);
+    background-color: rgba(255, 248, 100, 0.9);
     cursor: pointer;
     transition: 0.4s;    
     font-size: 125%;
