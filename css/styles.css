@@ -213,6 +213,10 @@ h2{
     color: rgb(220, 220, 220);
 } 
 /* ------------------------------------- Tarifs */
+#tarifsP{
+    position: absolute;
+    bottom:110px;
+}
 #légende{
     display: flex;
     flex-direction: column;
@@ -235,7 +239,7 @@ h2{
     margin: 50px 20px 0px 20px; 
 }
 #legend300{
-    background-color: rgb(204, 204, 153);
+    background-color: rgb(109, 220, 235);
     margin: 20px 20px 0px 20px; 
 }
 #legend400{
@@ -323,3 +327,7 @@ h2{
     width: 20rem;
   }
 
+#imgContact{
+    justify-content: center;
+    align-items: center;
+}
