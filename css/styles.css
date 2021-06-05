@@ -41,7 +41,7 @@ h2{
     background-size: cover;
 }
 #princAccueil{
-    background: url("../Fichiers/beach-1852945_1920.jpg") no-repeat center;
+    background: url("../Fichiers/beach-accueil.jpg") no-repeat center;
 }
 #princDiapo{
     background: linear-gradient(#d6f4fa, #ade8f4);
@@ -238,19 +238,21 @@ h2{
     width: 60px;
     margin: 50px 20px 0px 20px; 
 }
+#pLegend{
+    font-size: 0.8rem;
+    font-weight:normal;
+}
 #legend300{
-    background-color: rgb(109, 220, 235);
+    background-color: rgb(223, 195, 252);    
     margin: 20px 20px 0px 20px; 
 }
 #legend400{
     background-color: rgb(255, 204, 153);
 }
 #legend500{
-    background-color: rgb(204, 153, 255);
+    background-color: rgb(109, 220, 235);
 }
-#legendRéservé{
-    background-color: rgb(255, 153, 153);
-}
+
 /* --------------------------------- Pdf --------------------*/
 .pdf{
     display: inline-block;
@@ -328,6 +330,12 @@ h2{
   }
 
 #imgContact{
+    display:flex;
+    flex-direction: column;
+    background-color: #d6eefc;
+    line-height: 3rem;
     justify-content: center;
     align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
