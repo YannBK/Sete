@@ -6,10 +6,24 @@
     h2{
         display:none;
     }
+    .imageAcceuil,
+    #iframe{
+        transform: scale(0.70);
+        margin: 1rem auto 5px auto;  
+    }
     #légende{
         left: 5%;
         height: 70vh;
         font-size: 0.8rem;
+    }
+    #légendes{
+        left: 2%;
+        height: 70vh;
+        font-size: 0.8rem;
+    }
+    .pdf{
+        margin: 0px 0.1rem 0 0.1rem;
+        bottom: 30px;
     }
 }
 @media(max-height: 800px){/* ------------------------- height 800*/
@@ -36,9 +50,12 @@
     }
     .pdf{
         margin: 0px 0.1rem 0 0.1rem;
-        bottom: 50px;
+        bottom: 40px;
     }
     #légende{
+        height: 70vh;
+    }
+    #légendes{
         height: 70vh;
     }
 }
@@ -82,6 +99,15 @@
         font-weight: bold;
         margin: 0 auto 5px auto;
     }
+    #légendes{
+        flex-direction: row;
+        position: relative;
+        height: 60px;
+        width: 715px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 0 auto 5px auto;
+    }
   .legend{
         margin: 0px 20px 0px 20px; 
     } 
@@ -99,6 +125,9 @@
         max-width: 627px;
     }
     #légende{
+        width: 627px;
+    }
+    #légendes{
         width: 627px;
     }
     #Chalet{
@@ -121,12 +150,14 @@
     }
     #légende{
         width: 480px;
+        font-size: 1rem;        
+    }
+    #légendes{
+        width: 480px;
+        font-size: 0.8rem;
     }
     h1{
         font-size: 1.6rem;
-    }
-    #légende{
-        font-size: 1rem;
     }
     .legend{
         margin: 0px 10px 0px 20px; 

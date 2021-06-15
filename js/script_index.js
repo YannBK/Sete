@@ -28,35 +28,35 @@ function scrollBtn() {
     	removeActive();
 		btnAccueil.className += " active";
 	}
+	// else if((hauteur -125) < position && position < (hauteur*2 -125)){
+    // 	removeActive();
+	// 	btnDiapo.className += " active";
+	// }
 	else if((hauteur -125) < position && position < (hauteur*2 -125)){
-    	removeActive();
-		btnDiapo.className += " active";
-	}
-	else if((hauteur*2 -125) < position && position < (hauteur*3 -125)){
     	removeActive();
 		btnPlan.className += " active";
 	}
-	else if((hauteur*3 -125) < position && position < (hauteur*4 -125)){
+	else if((hauteur*2 -125) < position && position < (hauteur*3 -125)){
     	removeActive();
 		btnDescription.className += " active";
 	}
-	else if((hauteur*4 -125) < position && position < (hauteur*5 -125)){
-    	removeActive();
-		btnLocalisation.className += " active";
-	}
-	else if((hauteur*5 -125) < position && position < (hauteur*6 -125)){
-    	removeActive();
-		btnActivites.className += " active";
-	}
-	else if((hauteur*6 -125) < position && position < (hauteur*7 -125)){
+	// else if((hauteur*4 -125) < position && position < (hauteur*5 -125)){
+    // 	removeActive();
+	// 	btnLocalisation.className += " active";
+	// }
+	// else if((hauteur*5 -125) < position && position < (hauteur*6 -125)){
+    // 	removeActive();
+	// 	btnActivites.className += " active";
+	// }
+	else if((hauteur*3 -125) < position && position < (hauteur*4 -125)){
     	removeActive();
 		btnRegion.className += " active";
 	}
-	else if((hauteur*7 -125) < position && position < (hauteur*8 -125)){
+	else if((hauteur*4 -125) < position && position < (hauteur*5 -125)){
     	removeActive();
 		btnTarifs.className += " active";
 	}
-	else if((hauteur*8 -125) < position){
+	else if((hauteur*5 -125) < position){
     	removeActive();
 		btnContact.classList.add('contactActive');
 	}

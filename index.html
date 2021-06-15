@@ -23,25 +23,21 @@
 
         <div id="nav_contenu">
             <nav id="Chalet">
-                <a href="#princAccueil" id="btnAccueil" class="lienNav active">Accueil</a>
-                <a href="#princDiapo" id="btnDiapo" class="lienNav">Photos</a>
+                <a href="#princAccueil" id="btnAccueil" class="lienNav active">Photos</a>
+                <!-- <a href="#princDiapo" id="btnDiapo" class="lienNav">Photos</a> -->
                 <a href="#princPlan" id="btnPlan" class="lienNav">Plan</a>
                 <a href="#princDescription" id="btnDescription" class="lienNav">Descriptif</a>
-                <a href="#princLocalisation" id="btnLocalisation" class="lienNav" id="acces">Accès</a>
-                <a href="#princActivites" id="btnActivites" class="lienNav">Activités</a>
+                <!-- <a href="#princLocalisation" id="btnLocalisation" class="lienNav" id="acces">Accès</a> -->
+                <!-- <a href="#princActivites" id="btnActivites" class="lienNav">Activités</a> -->
                 <a href="#princRegion" id="btnRegion" class="lienNav">La région</a>
                 <a href="#princTarifs" id="btnTarifs" class="lienNav">Tarifs</a>
-                <a href="#princContact" id="btnContact" class="lienNavCont">Contact</a>
+                <a href="#princContact" id="btnContact" class="lienNavCont">Accès - Contact</a>
             </nav>
         </div>
 
         <div class="princ" id="princAccueil">
             <h1>Le lieu idéal pour vos vacances</h1>
-            <img src="Fichiers/images/01_Vue_mer.JPG" class="imageAcceuil" alt="Vue mer de l'appartement">
-        </div>
-
-        <div class="princ" id="princDiapo">
-            <h2>Les photos</h2>
+            <!-- <img src="Fichiers/images/01_Vue_mer.JPG" class="imageAcceuil" alt="Vue mer de l'appartement"> -->
             <div id="divSlide"  class="imageAcceuil">
                 <img src="Fichiers/images/01_Vue_mer.JPG" id="Slide" name="Slide" alt="Diaporama de l'appartement">
                 <button class='btn' id="prev-btn">&#10094;</button>
@@ -51,30 +47,41 @@
             </div>
         </div>
 
+        <!-- <div class="princ" id="princDiapo">
+            <h2>Les photos</h2>
+            <div id="divSlide"  class="imageAcceuil">
+                <img src="Fichiers/images/01_Vue_mer.JPG" id="Slide" name="Slide" alt="Diaporama de l'appartement">
+                <button class='btn' id="prev-btn">&#10094;</button>
+                <button class='btn' id="stop">l l</button>
+                <button class='btn' id="play">&#9658;</button>
+                <button class='btn' id="next-btn">&#10095;</button>
+            </div> 
+        </div> -->
+
         <div class="princ" id="princPlan">
             <h2>Plan du logement</h2>
-            <img src="Fichiers/images/01_Vue_mer.JPG" class="imageAcceuil" alt="Plan du logement">
+            <div class="imageAcceuil" alt="Plan du logement">Ici le plan du logement</div>
             <a href="" class="pdf">Téléchargez le Pdf</a>
         </div>
 
         <div class="princ" id="princDescription">
             <h2>Description du logement</h2>
             <img src="Fichiers/images/01_Vue_mer.JPG" class="imageAcceuil" alt="Description du logement">
-            <a href="" class="pdf">Téléchargez le Pdf</a>
+            <a href="Fichiers/pdf/essaiDescriptionB.pdf" class="pdf">Téléchargez le Pdf</a>
         </div>
 
-        <div class="princ" id="princLocalisation">
+        <!-- <div class="princ" id="princLocalisation">
             <h2>Localisation</h2>
             <iframe src="https://www.google.com/maps/d/embed?mid=1UmbynYHGbrrBKrGoWrgyKuiWTVy4nXuQ&hl=fr"
                 class="imageAcceuil" id="iframe"></iframe>
             <a href="Fichiers/pdf/Acces.pdf" class="pdf">Téléchargez le Pdf</a>
-        </div>
+        </div> -->
 
-        <div class="princ" id=princActivites>
+        <!-- <div class="princ" id=princActivites>
             <h2>Loisirs</h2>
             <img src="Fichiers/images/01_Vue_mer.JPG" class="imageAcceuil" alt="Loisirs et activités">
             <a href="Fichiers/pdf/Acces.pdf" class="pdf">Téléchargez le Pdf</a>
-        </div>
+        </div> -->
 
         <div class="princ" id="princRegion">
             <h2>La région</h2>
@@ -106,9 +113,17 @@
 
         <div class="princ" id="princContact">
             <h2>Contact</h2>
-            <div class="imageAcceuil" id="imgContact">
-                <p>mail : villanelly@yahoo.fr </p><br> <p>tél : 06.20.99.49.68</p> <br>
-            </div>
+            <section id="légendes">
+                <p>Email : <br>locsete23@gmail.com</p>
+                <p>Tél : <br>06.20.99.49.68</p>
+
+            </section>
+            <!-- <div class="princ" id="princLocalisation"> -->
+                <h2>Localisation</h2>
+                <iframe src="https://www.google.com/maps/d/embed?mid=1UmbynYHGbrrBKrGoWrgyKuiWTVy4nXuQ&hl=fr"
+                    class="imageAcceuil" id="iframe"></iframe>
+                <a href="Fichiers/pdf/Acces.pdf" class="pdf">Téléchargez le Pdf</a>
+            <!-- </div> -->
         </div>
 
 
