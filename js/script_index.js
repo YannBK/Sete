@@ -24,39 +24,39 @@ window.addEventListener('scroll', scrollBtn)
 
 function scrollBtn() {
 	let position = window.scrollY;
-	if(position < (hauteur -125)){
+	if(position < (hauteur -250)){
     	removeActive();
 		btnAccueil.className += " active";
 	}
-	// else if((hauteur -125) < position && position < (hauteur*2 -125)){
+	// else if((hauteur -250) < position && position < (hauteur*2 -250)){
     // 	removeActive();
 	// 	btnDiapo.className += " active";
 	// }
-	else if((hauteur -125) < position && position < (hauteur*2 -125)){
+	else if((hauteur -250) < position && position < (hauteur*2 -250)){
     	removeActive();
 		btnPlan.className += " active";
 	}
-	else if((hauteur*2 -125) < position && position < (hauteur*3 -125)){
+	else if((hauteur*2 -250) < position && position < (hauteur*3 -250)){
     	removeActive();
 		btnDescription.className += " active";
 	}
-	// else if((hauteur*4 -125) < position && position < (hauteur*5 -125)){
+	// else if((hauteur*4 -250) < position && position < (hauteur*5 -250)){
     // 	removeActive();
 	// 	btnLocalisation.className += " active";
 	// }
-	// else if((hauteur*5 -125) < position && position < (hauteur*6 -125)){
+	// else if((hauteur*5 -250) < position && position < (hauteur*6 -250)){
     // 	removeActive();
 	// 	btnActivites.className += " active";
 	// }
-	else if((hauteur*3 -125) < position && position < (hauteur*4 -125)){
+	else if((hauteur*3 -250) < position && position < (hauteur*4 -250)){
     	removeActive();
 		btnRegion.className += " active";
 	}
-	else if((hauteur*4 -125) < position && position < (hauteur*5 -125)){
+	else if((hauteur*4 -250) < position && position < (hauteur*5 -250)){
     	removeActive();
 		btnTarifs.className += " active";
 	}
-	else if((hauteur*5 -125) < position){
+	else if((hauteur*5 -250) < position){
     	removeActive();
 		btnContact.classList.add('contactActive');
 	}

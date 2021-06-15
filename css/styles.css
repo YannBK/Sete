@@ -43,29 +43,29 @@ h2{
 #princAccueil{
     background: url("../Fichiers/beach-accueil.jpg") no-repeat center;
 }
-#princDiapo{
+/* #princDiapo{
     background: linear-gradient(#d6f4fa, #ade8f4);
-}
+} */
 #princPlan{
-    background: linear-gradient(#ade8f4, #90e0ef);
+    background: linear-gradient(#d6f4fa, #90e0ef);
 }
 #princDescription{
-    background: linear-gradient(#90e0ef, #48cae4);
+    background: linear-gradient(#90e0ef, #00b4d8);
 }
-#princLocalisation{
+/* #princLocalisation{
     background: linear-gradient(#48cae4,#00b4d8);
-}
-#princActivites{
+} */
+/* #princActivites{
     background: linear-gradient(#00b4d8, #48cae4);
-}
+} */
 #princRegion{
-    background: linear-gradient(#48cae4, #90e0ef);
+    background: linear-gradient(#00b4d8, #00b4d8);
 }
 #princTarifs{
-    background: linear-gradient(#90e0ef, #ade8f4);
+    background: linear-gradient(#00b4d8, #90e0ef);
 }
 #princContact{
-    background: linear-gradient(#ade8f4,#d6f4fa);
+    background: linear-gradient(#90e0ef,#d6f4fa);
 }
 .imageAcceuil{
     display: inline-block;
@@ -107,7 +107,7 @@ h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
     color: black;
-    width: 7rem;
+    width: 10rem;
     transition: 0.1s;
 }
 .lienNav:hover{
@@ -137,7 +137,7 @@ h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
     color: black;
-    width: 7rem;
+    width: 10rem;
 }
 #btnContact:hover{
     background-color: rgba(89, 215, 253, 0.9);
@@ -217,12 +217,16 @@ h2{
     position: absolute;
     bottom:110px;
 }
+.divlég{
+    display:flex;
+    flex-direction: column;
+}
 #légende{
     display: flex;
     flex-direction: column;
     position: absolute;
     background-color: rgba(256,256,256,0.8);
-    height: 600px;
+    height: 70vh;
     width: 120px;
     left: 0;
     border-radius: 5px;
@@ -237,8 +241,8 @@ h2{
     flex-direction: column;
     position: absolute;
     background-color: rgba(256,256,256,0.8);
-    height: 600px;
-    width: 220px;
+    height: 70vh;
+    width: 160px;
     left: 0;
     border-radius: 5px;
     align-items: center;
@@ -259,7 +263,7 @@ h2{
 }
 #legend300{
     background-color: rgb(223, 195, 252);    
-    margin: 20px 20px 0px 20px; 
+    margin: 10px 20px 0px 20px; 
 }
 #legend400{
     background-color: rgb(255, 204, 153);

@@ -1,11 +1,11 @@
 /* /* /* --------------------------------- Media --------------------*/
 @media(max-height: 700px){/* ------------------------- height 700*/
-    h1{
+    /* h1{
         display:none;
     }
     h2{
         display:none;
-    }
+    } */
     .imageAcceuil,
     #iframe{
         transform: scale(0.70);
@@ -32,7 +32,7 @@
     }
     .imageAcceuil,
     #iframe{
-        transform: scale(0.80);
+        transform: scale(0.8);
         margin: 1rem auto 5px auto;  
     }
     h1{
@@ -67,9 +67,9 @@
     #Slide{
        max-width: 715px;
     } 
-    h2{
+    /* h2{
        display: none;
-    }
+    } */
  }
 @media(max-width: 1250px){/* --------------------------------- width 1250*/
     .imageAcceuil,
@@ -158,6 +158,9 @@
     }
     h1{
         font-size: 1.6rem;
+    }
+    h2{
+        margin-top:80px;
     }
     .legend{
         margin: 0px 10px 0px 20px; 
