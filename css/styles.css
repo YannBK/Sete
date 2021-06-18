@@ -18,10 +18,14 @@ h1{
     font-size: 1.5rem;
     margin: 1.5rem auto 1.5rem auto;
 }
-h2{
-    font-size: 1.5rem;
-    margin: 1.5rem auto 1.5rem auto;
-}
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 /* ------------------------------- div princ */
 .princ{
     display: flex;
@@ -40,40 +44,33 @@ h2{
     background-position: top;
     background-size: cover;
 }
-#princAccueil{
-    background: url("../Fichiers/beach-accueil.jpg") no-repeat center;
-}
-/* #princDiapo{
-    background: linear-gradient(#d6f4fa, #ade8f4);
-} */
 #princPlan{
-    background: linear-gradient(#d6f4fa, #90e0ef);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
-#princDescription{
-    background: linear-gradient(#90e0ef, #00b4d8);
-}
-/* #princLocalisation{
-    background: linear-gradient(#48cae4,#00b4d8);
-} */
-/* #princActivites{
-    background: linear-gradient(#00b4d8, #48cae4);
-} */
 #princRegion{
-    background: linear-gradient(#00b4d8, #00b4d8);
+    background: url("../Fichiers/fond_sete_2.jpg") no-repeat center;
+    background-attachment: fixed;
 }
 #princTarifs{
-    background: linear-gradient(#00b4d8, #90e0ef);
+    background: url("../Fichiers/fond_sete_2.jpg") no-repeat center;
+    background-attachment: fixed;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 #princContact{
-    background: linear-gradient(#90e0ef,#d6f4fa);
+    background: url("../Fichiers/beach-accueil.jpg") no-repeat center;
+    background-attachment: fixed;
 }
 .imageAcceuil{
     display: inline-block;
-    width: 910px;
-    height: 607px;
+    width:100%;
+    height: 70vh;
     position: relative;
     border-radius: 5px;
-    box-shadow: 3px 3px 5px  rgb(102, 167, 211);
     margin: 5px auto 5px auto;
 } 
 /* --------------------------------- NavBar --------------------*/
@@ -90,9 +87,9 @@ h2{
     display: flex;
     flex-direction: row;
     width: 94vw;
-    height: 5rem;
+    height: 4rem;
     justify-content: space-between;
-    line-height: 3.5rem;
+    line-height: 2.5rem;
     background-color: transparent;
     padding: 0 1vw;
 }
@@ -107,8 +104,9 @@ h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
     color: black;
-    width: 10rem;
+    width: 8rem;
     transition: 0.1s;
+    text-decoration: underline transparent;
 }
 .lienNav:hover{
     transition: 0.4s;    
@@ -116,6 +114,8 @@ h2{
     font-size: 115%;
     box-shadow: 3px 3px 10px  rgb(53, 133, 187);
     cursor: pointer;
+    text-decoration: underline #333 2px;
+    transition: text-decoration 1s;
 }
 .active{
     transition: 0.4s;
@@ -123,6 +123,7 @@ h2{
     box-shadow: 5px 5px 10px  rgb(53, 133, 187);
     font-size: 115%;
     cursor:auto;
+    text-decoration: underline #333 2px;
 }
 .lienNavCont{
     background-color: rgba(167, 234, 255, 0.6);
@@ -138,18 +139,22 @@ h2{
     font-weight: 600;
     color: black;
     width: 10rem;
+    text-decoration: underline transparent;
 }
 #btnContact:hover{
     background-color: rgba(89, 215, 253, 0.9);
     cursor: pointer;
     box-shadow: 3px 3px 10px  rgb(248, 234, 154);
     font-size: 115%;
+    text-decoration: underline #333 2px;
+    transition: text-decoration 1s;
 }
 .contactActive{
     background-color: rgba(89, 215, 253, 0.9);
     cursor: pointer;
     box-shadow: 3px 3px 10px  rgb(248, 234, 154);
-    font-size: 120%;
+    font-size: 115%;
+    text-decoration: underline #333 2px;
 }
  /* ---------------------------------------- Diapo */
 #divSlide{
@@ -213,60 +218,59 @@ h2{
     color: rgb(220, 220, 220);
 } 
 /* ------------------------------------- Tarifs */
-#tarifsP{
-    position: absolute;
-    bottom:110px;
-}
 .divlég{
     display:flex;
     flex-direction: column;
 }
 #légende{
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: rgba(256,256,256,0.8);
-    height: 70vh;
-    width: 120px;
-    left: 0;
+    flex-direction: row;
+    position: relative;
+    top:20px;
+    height: 60px;
+    width: 715px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 5px auto;
+    background-color: rgb(256,256,256);
     border-radius: 5px;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 1.2rem;
     font-weight: bold;
-    margin-left: 20px;
+}
+#pdftarif{
+    top: 20px;
 }
 #légendes{
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: rgba(256,256,256,0.8);
-    height: 70vh;
-    width: 160px;
-    left: 0;
+    flex-direction: row;
+    position: relative;
+    background-color: rgb(256,256,256);
+    height: 60px;
+    width: 715px;
     border-radius: 5px;
     align-items: center;
     justify-content: space-evenly;
     font-size: 1rem;
     font-weight: bold;
-    margin-left: 20px;
+    margin : 5px auto;
 }
 .legend{
     display: inline-block;
     height: 20px;
     width: 60px;
-    margin: 50px 20px 0px 20px; 
+    margin: 0px 20px 0px 20px; 
 }
 #pLegend{
     font-size: 0.8rem;
     font-weight:normal;
 }
 #legend300{
-    background-color: rgb(223, 195, 252);    
-    margin: 10px 20px 0px 20px; 
+    background-color: rgb(200, 156, 248);    
+    margin: 10px 20px 10px 20px; 
 }
 #legend400{
-    background-color: rgb(255, 204, 153);
+    background-color: rgb(252, 186, 120);
 }
 #legend500{
     background-color: rgb(109, 220, 235);
@@ -275,8 +279,8 @@ h2{
 /* --------------------------------- Pdf --------------------*/
 .pdf{
     display: inline-block;
-    position:absolute;
-    bottom:50px;
+    position:relative;
+    margin: 5px auto;
     padding: 10px 5px;
     border: solid rgb(248, 244, 223) 2px;
     text-decoration: none;
@@ -292,7 +296,7 @@ h2{
 .pdf:hover{
     background-color: rgba(255, 248, 100, 0.9);
     cursor: pointer;
-    transition: 0.4s;    
+    transition: 0.2s;    
     font-size: 125%;
     box-shadow: 5px 5px 10px  rgb(53, 133, 187);
 }
@@ -303,7 +307,8 @@ h2{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-color: #d6eefc;
+    background-color: rgba(256, 256, 256, 0.4);
+    width: 60vw;
 }
 #Tourisme div{
     display: flex;
@@ -321,7 +326,9 @@ h2{
 .region{
     display: block;
 }
-
+#imgHerault{
+    background-color: #444;
+}
 
 .infobulle {
     position: relative;  /* les .infobulle deviennent référents */
@@ -345,15 +352,17 @@ h2{
     background-color:cornsilk;
     border-radius: 10px;
     width: 20rem;
-  }
-
-#imgContact{
-    display:flex;
-    flex-direction: column;
-    background-color: #d6eefc;
-    line-height: 3rem;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: bold;
+    }
+#imgCal{
+    margin: 5px auto;
+    display: block;
+    transform: scale(1.2);
+    position: relative;
+    bottom:20px;
+    max-width: 95vw;
+}
+#iframe{
+    display: block;
+    align-self: center;
+    margin: 5px auto;
 }

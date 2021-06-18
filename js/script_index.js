@@ -11,6 +11,7 @@ const btnActivites = document.getElementById('btnActivites')
 const btnRegion = document.getElementById('btnRegion')
 const btnTarifs = document.getElementById('btnTarifs')
 const btnContact = document.getElementById('btnContact');
+const btnPlan2 = document.getElementById('btnPlan2');
 
  function removeActive() {
 	if (current.length > 0) {
@@ -28,33 +29,21 @@ function scrollBtn() {
     	removeActive();
 		btnAccueil.className += " active";
 	}
-	// else if((hauteur -250) < position && position < (hauteur*2 -250)){
-    // 	removeActive();
-	// 	btnDiapo.className += " active";
-	// }
 	else if((hauteur -250) < position && position < (hauteur*2 -250)){
     	removeActive();
 		btnPlan.className += " active";
 	}
 	else if((hauteur*2 -250) < position && position < (hauteur*3 -250)){
     	removeActive();
-		btnDescription.className += " active";
+		btnPlan2.className += " active";
 	}
-	// else if((hauteur*4 -250) < position && position < (hauteur*5 -250)){
-    // 	removeActive();
-	// 	btnLocalisation.className += " active";
-	// }
-	// else if((hauteur*5 -250) < position && position < (hauteur*6 -250)){
-    // 	removeActive();
-	// 	btnActivites.className += " active";
-	// }
 	else if((hauteur*3 -250) < position && position < (hauteur*4 -250)){
     	removeActive();
-		btnRegion.className += " active";
+		btnDescription.className += " active";
 	}
 	else if((hauteur*4 -250) < position && position < (hauteur*5 -250)){
     	removeActive();
-		btnTarifs.className += " active";
+		btnRegion.className += " active";
 	}
 	else if((hauteur*5 -250) < position){
     	removeActive();

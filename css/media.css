@@ -1,4 +1,9 @@
 /* /* /* --------------------------------- Media --------------------*/
+@media(max-height: 650px){
+    h1{
+        display: none;
+    }
+}
 @media(max-height: 700px){/* ------------------------- height 700*/
     /* h1{
         display:none;
@@ -6,12 +11,12 @@
     h2{
         display:none;
     } */
-    .imageAcceuil,
+    /* .imageAcceuil,
     #iframe{
         transform: scale(0.70);
         margin: 1rem auto 5px auto;  
-    }
-    #légende{
+    } */
+    /* #légende{
         left: 5%;
         height: 70vh;
         font-size: 0.8rem;
@@ -20,44 +25,36 @@
         left: 2%;
         height: 70vh;
         font-size: 0.8rem;
-    }
-    .pdf{
+    } */
+    /* .pdf{
         margin: 0px 0.1rem 0 0.1rem;
         bottom: 30px;
-    }
+    } */
 }
 @media(max-height: 800px){/* ------------------------- height 800*/
     body{
         margin: 0px;
     }
-    .imageAcceuil,
-    #iframe{
-        transform: scale(0.8);
+    /* .imageAcceuil,
+    #iframe,
+    #imgCal{
+        transform: scale(0.9);
         margin: 1rem auto 5px auto;  
-    }
+    } */
     h1{
-        margin: 3.5rem auto 1rem auto;
+        margin: 2.5rem auto 1rem auto;
         position:absolute;
         top:2rem;
     }
-    h2{
-        margin: 3.5rem auto 1rem auto;
-        position:absolute;
-        top:2rem;
-    }
+
     #nav_contenu{
         transform: scale(0.9);
     }
-    .pdf{
-        margin: 0px 0.1rem 0 0.1rem;
+    /* .pdf{
+        margin: 0 auto;
         bottom: 40px;
-    }
-    #légende{
-        height: 70vh;
-    }
-    #légendes{
-        height: 70vh;
-    }
+    } */
+
 }
  @media screen and (max-width: 1100px) and (max-height: 800px){/*------- height 800 --- width 1050 */
     .imageAcceuil{
@@ -67,47 +64,28 @@
     #Slide{
        max-width: 715px;
     } 
-    /* h2{
-       display: none;
-    } */
+
  }
 @media(max-width: 1250px){/* --------------------------------- width 1250*/
-    .imageAcceuil,
+    /* .imageAcceuil,
     #iframe{
         height: 569px;
         width: 806px;
-    } 
-    #Slide{
+    }  */
+    /* #Slide{
         max-width: 806px;
-    }
+    } */
 }
  @media(max-width: 1100px){/* --------------------------------- width 1100*/
-    .imageAcceuil,
+    /* .imageAcceuil,
      #iframe{
         height: 506px;
         width: 715px;
     } 
     #Slide{
         max-width: 715px;
-    }
-    #légende{
-        flex-direction: row;
-        position: relative;
-        height: 60px;
-        width: 715px;
-        font-size: 1.1rem;
-        font-weight: bold;
-        margin: 0 auto 5px auto;
-    }
-    #légendes{
-        flex-direction: row;
-        position: relative;
-        height: 60px;
-        width: 715px;
-        font-size: 0.9rem;
-        font-weight: bold;
-        margin: 0 auto 5px auto;
-    }
+    } */
+
   .legend{
         margin: 0px 20px 0px 20px; 
     } 
@@ -116,11 +94,12 @@
     }
 }
    @media(max-width: 855px){/* --------------------------------- width 855*/
-    .imageAcceuil,
-     #iframe{
+    /* .imageAcceuil,
+     #iframe,
+     #imgCal{
         width: 627px;
         height: 443px;
-    } 
+    }  */
     #Slide{
         max-width: 627px;
     }
@@ -136,15 +115,22 @@
         line-height: 1.5rem;
     }
     .lienNav{
-        margin: 0.2rem 0.1rem 0.2rem 0.1rem;
+        margin: 0.1rem 0.1rem 0 0.1rem;
+    }
+    .lienNavCont{
+        margin: 0.1rem 0.1rem 0 0.1rem;
     }
 }
 @media(max-width: 650px){/* --------------------------------- width 675*/
-    .imageAcceuil,
-     #iframe{
+    /* .imageAcceuil,
+     #iframe,
+     #imgCal{
         width: 480px;
         height: 353px;
-    } 
+    }  */
+    /* #iframe{
+        
+    } */
     #Slide{
         max-width: 480px
     }
@@ -154,14 +140,15 @@
     }
     #légendes{
         width: 480px;
-        font-size: 0.8rem;
+        font-size: 1rem;
+        margin-bottom: 100px;
     }
     h1{
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
-    h2{
+    /* h2{
         margin-top:80px;
-    }
+    } */
     .legend{
         margin: 0px 10px 0px 20px; 
     }
@@ -169,10 +156,19 @@
         transform: scale(0.4);
     }
     .lienNav{
-        margin: 0.2rem 0 0.2rem 0;
+        margin: 0.1rem 0 0 0;
     }
     .lienNavCont{
-        margin: 0.2rem 0 0.2rem 0;
+        margin: 0.1rem 0 0 0;
+    }
+    #pdfDes{
+        transform: scale(0.8);
+    }
+    #princRegion{
+        height: 70vh;
+    }
+    #princTarifs{
+        height: 70vh;
     }
 }
   
