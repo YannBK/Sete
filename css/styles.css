@@ -44,26 +44,37 @@ video {
     background-position: top;
     background-size: cover;
 }
+#princAccueil{
+    max-height: 130vw;
+}
 #princPlan{
+    max-height: 130vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
+#princPlan2{
+    max-height: 130vw;
+}
 #princRegion{
     background: url("../Fichiers/fond_sete_2.jpg") no-repeat center;
     background-attachment: fixed;
+    max-height: 130vw;
 }
 #princTarifs{
-    background: url("../Fichiers/fond_sete_2.jpg") no-repeat center;
-    background-attachment: fixed;
+    max-height: 130vw;
     display:flex;
     align-items: center;
     justify-content: center;
 }
 #princContact{
-    background: url("../Fichiers/beach-accueil.jpg") no-repeat center;
+    max-height: 130vw;
+       background: url("../Fichiers/fond_sete_2.jpg") no-repeat center;
     background-attachment: fixed;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 .imageAcceuil{
     display: inline-block;
@@ -72,6 +83,8 @@ video {
     position: relative;
     border-radius: 5px;
     margin: 5px auto 5px auto;
+    max-width: 100vw;
+    max-height: 70vw;
 } 
 /* --------------------------------- NavBar --------------------*/
 #nav_contenu{
@@ -104,7 +117,7 @@ video {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
     color: black;
-    width: 8rem;
+    width: 8.2rem;
     transition: 0.1s;
     text-decoration: underline transparent;
 }
@@ -138,7 +151,7 @@ video {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
     color: black;
-    width: 10rem;
+    width: 8.2rem;
     text-decoration: underline transparent;
 }
 #btnContact:hover{
@@ -159,6 +172,14 @@ video {
  /* ---------------------------------------- Diapo */
 #divSlide{
     box-shadow: none;
+    max-width: 100vw;
+    max-height: 70vw;
+    display: inline-block;
+width:100%;
+height: 70vh;
+position: relative;
+border-radius: 5px;
+margin: 5px auto 5px auto;
 }
 #Slide{
     display: flex;
@@ -166,6 +187,8 @@ video {
     margin: 0 auto;
     border-radius: 10px;
     border: 1px solid black;
+    max-width: 100vw;
+    max-height: 70vw;
 }
 /* ---------------- -------------- Diapo boutons */
  .btn{
@@ -217,6 +240,9 @@ video {
     background-color: rgba(0, 0, 0, 0.25);
     color: rgb(220, 220, 220);
 } 
+#imgPlan{
+    transform: scale(0.8);
+}
 /* ------------------------------------- Tarifs */
 .divlég{
     display:flex;
@@ -254,6 +280,7 @@ video {
     font-size: 1rem;
     font-weight: bold;
     margin : 5px auto;
+    max-width: 100vw;
 }
 .legend{
     display: inline-block;
@@ -309,7 +336,9 @@ video {
     justify-content: center;
     background-color: rgba(256, 256, 256, 0.4);
     width: 60vw;
-}
+    /* height: 60vw; */
+} 
+
 #Tourisme div{
     display: flex;
     flex-direction: column;
@@ -330,6 +359,7 @@ video {
     background-color: #444;
 }
 
+
 .infobulle {
     position: relative;  /* les .infobulle deviennent référents */
   }
@@ -340,7 +370,7 @@ video {
   .infobulle:focus::after {
     content: attr(aria-label);  /* on affiche aria-label */
     position: absolute;
-    bottom: -4.4em;
+    bottom: -3.5em;
     left: 50%;
     transform: translateX(-50%); /* on centre horizontalement  */
     z-index: 1; /* pour s'afficher au dessus des éléments en position relative */
@@ -348,7 +378,7 @@ video {
     color:black;
     font-size: 1.9rem;
     border: rgb(248, 244, 223) solid 1px;
-    padding: 30px 5px;
+    padding: 15px 5px;
     background-color:cornsilk;
     border-radius: 10px;
     width: 20rem;
@@ -356,10 +386,10 @@ video {
 #imgCal{
     margin: 5px auto;
     display: block;
-    transform: scale(1.2);
+    transform: scale(0.9);
     position: relative;
     bottom:20px;
-    max-width: 95vw;
+    max-width: 100vw;
 }
 #iframe{
     display: block;
