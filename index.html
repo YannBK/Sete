@@ -7,16 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="geo.placename" content="Sète">
     <meta name="description" content="Location de vacances en appartement à Sète, vue sur mer et Mont Saint-Clair">
-
 <!--CSS-->
     <link href="css/stylesreset.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/media.css" rel="stylesheet">
-
 </head>
 
 <body>
-
     <main>
         <video playsinline autoplay muted loop poster="beach-accueil.jpg" id="bgvid">
             <source src="Fichiers/video/Beach3_OK.mp4">
@@ -25,8 +22,8 @@
         <div id="nav_contenu">
             <nav id="Chalet">
                 <a href="#princAccueil" id="btnAccueil" class="lienNav active">Photos</a>
-                <a href="#princPlan" id="btnPlan" class="lienNav">Plan</a>
-                <a href="#princPlan2" id="btnPlan2" class="lienNav">Description</a>
+                <a href="#txt" id="btnPlan2" class="lienNav">Description</a>
+                <a href="#imgPlan" id="btnPlan" class="lienNav">Plan</a>
                 <a href="#princTarifs" id="btnDescription" class="lienNav">Tarifs</a>
                 <a href="#princRegion" id="btnRegion" class="lienNav">Tourisme</a>
                 <a href="#princContact" id="btnContact" class="lienNavCont">Accès - Contact</a>
@@ -45,10 +42,16 @@
         </div>
 
         <div class="princ" id="princPlan">
-            <img id="imgPlan" src="Fichiers/images/Plan.JPG">
-        </div>
-        <div class="princ" id="princPlan2">
-            <img src="Fichiers/images/DescriptionFactice.JPG" alt="Description du logement" id="pdfDes">
+           <section id="txt">
+            <p>DESCRIPTIF<br><br>
+            Studio cabine au 5ème et dernier étage d’une résidence sécurisée avec ascenseur et gardien située à 150 m des plages avec une belle vue mer et sur le mont Saint Clair. Il comprend un salon-cuisine avec lit-canapé escamotable 140x200, une chambre cabine avec 2 lits superposés et une salle d’eau avec WC.<br>
+            Entièrement aménagé et équipé : armoire, téléviseur, plaque induction 4 feux, four micro-ondes, lave-linge, fer à repasser, sèche-cheveux, vaisselle,…<br>
+            Véranda avec cuisine d'été, plaque induction 2 feux, réfrigérateur, combiné four/micro-ondes, cafetière à filtre, bouilloire, grille-pain, télévision, vaisselle, canapé, table & chaises. Terrasse avec salon d'extérieur. Stationnement gratuit au pied de l'immeuble.<br>
+            Un chèque de caution de 250€ sera demandé à l'arrivée ainsi qu'un chèque de 50€ de frais de ménage si non réalisé.<br><br>
+            LOCALISATIONS ET SERVICES<br><br>
+            Proche des restaurants, bars, épicerie, boulangerie, pharmacie, coiffeur, marché de producteurs locaux (le mardi l'été),… un arrêt de bus  face à la piscine (ligne 3) à 100m permet d’accéder au centre-ville, à la gare, au Casino et aux centres commerciaux Lidl et Auchan (Lidl est également accessible  en 10mn à pied).
+            </p></section>
+            <img id="imgPlan" src="Fichiers/images/Plan2.png">            
         </div>
 
         <div class="princ" id="princTarifs">
@@ -99,7 +102,6 @@
             </div>
             <a href="Fichiers/pdf/PDF_Complet.pdf" class="pdf">Téléchargez le Pdf</a>
         </div>
-
 
 <!--JavaScript-->
         <script src="js/script_index.js"></script>

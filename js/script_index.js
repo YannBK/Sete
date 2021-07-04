@@ -31,11 +31,11 @@ function scrollBtn() {
 	}
 	else if((hauteur -250) < position && position < (hauteur*2 -250)){
     	removeActive();
-		btnPlan.className += " active";
+		btnPlan2.className += " active";
 	}
 	else if((hauteur*2 -250) < position && position < (hauteur*3 -250)){
     	removeActive();
-		btnPlan2.className += " active";
+		btnPlan.className += " active";
 	}
 	else if((hauteur*3 -250) < position && position < (hauteur*4 -250)){
     	removeActive();
