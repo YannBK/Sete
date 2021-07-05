@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="geo.placename" content="Sète">
     <meta name="description" content="Location de vacances en appartement à Sète, vue sur mer et Mont Saint-Clair">
-<!--CSS-->
+    <!--CSS-->
     <link href="css/stylesreset.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/media.css" rel="stylesheet">
@@ -22,9 +22,9 @@
         <div id="nav_contenu">
             <nav id="Chalet">
                 <a href="#princAccueil" id="btnAccueil" class="lienNav active">Photos</a>
-                <a href="#txt" id="btnPlan2" class="lienNav">Description</a>
+                <a href="#txt" id="btnDescription" class="lienNav">Description</a>
                 <a href="#imgPlan" id="btnPlan" class="lienNav">Plan</a>
-                <a href="#princTarifs" id="btnDescription" class="lienNav">Tarifs</a>
+                <a href="#princTarifs" id="btnTarifs" class="lienNav">Tarifs</a>
                 <a href="#princRegion" id="btnRegion" class="lienNav">Tourisme</a>
                 <a href="#princContact" id="btnContact" class="lienNavCont">Accès - Contact</a>
             </nav>
@@ -32,7 +32,7 @@
 
         <div class="princ" id="princAccueil">
             <h1>Le lieu idéal pour vos vacances</h1>
-            <div id="divSlide" class="imageAcceuil">
+            <div id="divSlide">
                 <img src="Fichiers/images/01_Vue_mer.JPG" id="Slide" name="Slide" alt="Diaporama de l'appartement">
                 <button class='btn' id="prev-btn">&#10094;</button>
                 <button class='btn' id="stop">l l</button>
@@ -42,22 +42,33 @@
         </div>
 
         <div class="princ" id="princPlan">
-           <section id="txt">
-            <p>DESCRIPTIF<br><br>
-            Studio cabine au 5ème et dernier étage d’une résidence sécurisée avec ascenseur et gardien située à 150 m des plages avec une belle vue mer et sur le mont Saint Clair. Il comprend un salon-cuisine avec lit-canapé escamotable 140x200, une chambre cabine avec 2 lits superposés et une salle d’eau avec WC.<br>
-            Entièrement aménagé et équipé : armoire, téléviseur, plaque induction 4 feux, lave-linge, fer à repasser, sèche-cheveux, vaisselle,…<br>
-            Véranda avec cuisine d'été, plaque induction 2 feux, réfrigérateur, micro-ondes, cafetière à filtre, bouilloire, grille-pain, télévision, vaisselle, canapé, table & chaises. Terrasse avec salon d'extérieur. Stationnement gratuit au pied de l'immeuble.<br>
-            Un chèque de caution de 250€ sera demandé à l'arrivée ainsi qu'un chèque de 50€ de frais de ménage si non réalisé.<br><br>
-            LOCALISATIONS ET SERVICES<br><br>
-            Proche des restaurants, bars, épicerie, boulangerie, pharmacie, coiffeur, marché de producteurs locaux (le mardi l'été),… un arrêt de bus  face à la piscine (ligne 3) à 100m permet d’accéder au centre-ville, à la gare, au Casino et aux centres commerciaux Lidl et Auchan (Lidl est également accessible  en 10mn à pied).
-            </p></section>
-            <img id="imgPlan" src="Fichiers/images/Plan2.png">            
+            <section id="txt">
+                <p>DESCRIPTIF<br><br>
+                    Studio cabine au 5ème et dernier étage d’une résidence sécurisée avec ascenseur et gardien située à
+                    150 m des plages avec une belle vue mer et sur le mont Saint Clair. Il comprend un salon-cuisine
+                    avec lit-canapé escamotable 140x200, une chambre cabine avec 2 lits superposés et une salle d’eau
+                    avec WC.<br>
+                    Entièrement aménagé et équipé : armoire, téléviseur, plaque induction 4 feux, lave-linge, fer à
+                    repasser, sèche-cheveux, vaisselle,…<br>
+                    Véranda avec cuisine d'été, plaque induction 2 feux, réfrigérateur, micro-ondes, cafetière à filtre,
+                    bouilloire, grille-pain, télévision, vaisselle, canapé, table & chaises. Terrasse avec salon
+                    d'extérieur. Stationnement gratuit au pied de l'immeuble.<br>
+                    Un chèque de caution de 250€ sera demandé à l'arrivée ainsi qu'un chèque de 50€ de frais de ménage
+                    si non réalisé.<br><br>
+                    LOCALISATIONS ET SERVICES<br><br>
+                    Proche des restaurants, bars, épicerie, boulangerie, pharmacie, coiffeur, marché de producteurs
+                    locaux (le mardi l'été),… un arrêt de bus face à la piscine (ligne 3) à 100m permet d’accéder au
+                    centre-ville, à la gare, au Casino et aux centres commerciaux Lidl et Auchan (Lidl est
+                    également accessible en 10mn à pied).
+                </p>
+            </section>
+            <img id="imgPlan" src="Fichiers/images/Plan2.png">
         </div>
 
         <div class="princ" id="princTarifs">
             <div class="divlég">
-                <img src="Fichiers/calendrier/Calendrier_tarifs.JPG" 
-                    alt="Calendrier des tarifs de location" id="imgCal">
+                <img src="Fichiers/calendrier/Calendrier_tarifs.JPG" alt="Calendrier des tarifs de location"
+                    id="imgCal">
                 <section id="légende">
                     <div class="legend" id="legend300"></div>
                     <p>270€ / semaine</p>
@@ -72,7 +83,7 @@
         </div>
 
         <div class="princ" id="princRegion">
-            <div id="Tourisme" class="imageAcceuil">
+            <div id="Tourisme">
                 <div><a href="https://www.tourisme-sete.com/" target="_blank" class="region"><span class="infobulle"
                             aria-label="Office du tourisme de Sète"><img src="Fichiers/logo/Sete.png" id="imgSete"
                                 alt="Office du tourisme de Sète"></span></a></div>
@@ -93,7 +104,9 @@
 
         <div class="princ" id="princContact">
             <div class="divlég">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d5316.988963393672!2d3.6612163102558677!3d43.39565677125947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e2!4m0!4m3!3m2!1d43.3957392!2d3.6630722999999996!5e0!3m2!1sfr!2sfr!4v1623851056521!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" id="iframe"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d5316.988963393672!2d3.6612163102558677!3d43.39565677125947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e2!4m0!4m3!3m2!1d43.3957392!2d3.6630722999999996!5e0!3m2!1sfr!2sfr!4v1623851056521!5m2!1sfr!2sfr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" id="iframe"></iframe>
 
                 <section id="légendes">
                     <p>Email : <br>locsete23 @gmail.com</p>
@@ -103,7 +116,7 @@
             <a href="Fichiers/pdf/PDF_Complet.pdf" class="pdf">Téléchargez le Pdf</a>
         </div>
 
-<!--JavaScript-->
+        <!--JavaScript-->
         <script src="js/script_index.js"></script>
     </main>
 

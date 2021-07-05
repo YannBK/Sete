@@ -1,57 +1,79 @@
 
-//  ------- activer / désactiver class avec le scroll ----------
-const liens = document.getElementsByClassName('lienNav');
+// ------------------ activer / désactiver class
 let current = document.getElementsByClassName(" active");
 const btnAccueil = document.getElementById('btnAccueil')
-const btnDiapo = document.getElementById('btnDiapo')
-const btnPlan = document.getElementById('btnPlan')
 const btnDescription = document.getElementById('btnDescription')
-const btnLocalisation = document.getElementById('btnLocalisation')
-const btnActivites = document.getElementById('btnActivites')
-const btnRegion = document.getElementById('btnRegion')
+const btnPlan = document.getElementById('btnPlan')
 const btnTarifs = document.getElementById('btnTarifs')
+const btnRegion = document.getElementById('btnRegion')
 const btnContact = document.getElementById('btnContact');
-const btnPlan2 = document.getElementById('btnPlan2');
 
- function removeActive() {
-	if (current.length > 0) {
+function removeActive() {
+	while (current.length > 0) {
 		current[0].className = current[0].className.replace(" active", "");
-	  }
-	  btnContact.classList.remove('contactActive'); 
- }
-
-const hauteur = document.documentElement.clientHeight;
-window.addEventListener('scroll', scrollBtn)
+	}
+	btnContact.classList.remove('contactActive');
+}
 
 function scrollBtn() {
 	let position = window.scrollY;
-	if(position < (hauteur -250)){
-    	removeActive();
-		btnAccueil.className += " active";
+	const hauteur = document.documentElement.clientHeight;
+	const hauteurChange = hauteur / 3;
+	if (window.innerWidth > 1250) {
+		if (position < (hauteur - hauteurChange)) {
+			removeActive();
+			btnAccueil.className += " active";
+		}
+		else if ((hauteur - hauteurChange) < position && position < (hauteur * 2 - hauteurChange)) {
+			removeActive();
+			btnDescription.className += " active";
+			btnPlan.className += " active";
+		}
+		else if ((hauteur * 2 - hauteurChange) < position && position < (hauteur * 3 - hauteurChange)) {
+			removeActive();
+			btnTarifs.className += " active";
+		}
+		else if ((hauteur * 3 - hauteurChange) < position && position < (hauteur * 4 - hauteurChange)) {
+			removeActive();
+			btnRegion.className += " active";
+		}
+		else if ((hauteur * 4 - hauteurChange) < position && position < (hauteur * 5 - hauteurChange)) {
+			removeActive();
+			btnContact.classList.add('contactActive');
+		}
 	}
-	else if((hauteur -250) < position && position < (hauteur*2 -250)){
-    	removeActive();
-		btnPlan2.className += " active";
-	}
-	else if((hauteur*2 -250) < position && position < (hauteur*3 -250)){
-    	removeActive();
-		btnPlan.className += " active";
-	}
-	else if((hauteur*3 -250) < position && position < (hauteur*4 -250)){
-    	removeActive();
-		btnDescription.className += " active";
-	}
-	else if((hauteur*4 -250) < position && position < (hauteur*5 -250)){
-    	removeActive();
-		btnRegion.className += " active";
-	}
-	else if((hauteur*5 -250) < position){
-    	removeActive();
-		btnContact.classList.add('contactActive');
+	else {
+		if (position < (hauteur - hauteurChange)) {
+			removeActive();
+			btnAccueil.className += " active";
+		}
+		else if ((hauteur - hauteurChange) < position && position < (hauteur * 2 - hauteurChange)) {
+			removeActive();
+			btnDescription.className += " active";
+		}
+		else if ((hauteur * 2 - hauteurChange) < position && position < (hauteur * 3 - hauteurChange)) {
+			removeActive();
+			btnPlan.className += " active";
+		}
+		else if ((hauteur * 3 - hauteurChange) < position && position < (hauteur * 4 - hauteurChange)) {
+			removeActive();
+			btnTarifs.className += " active";
+		}
+		else if ((hauteur * 4 - hauteurChange) < position && position < (hauteur * 5 - hauteurChange)) {
+			removeActive();
+			btnRegion.className += " active";
+		}
+		else if ((hauteur * 5 - hauteurChange) < position) {
+			removeActive();
+			btnContact.classList.add('contactActive');
+		}
 	}
 }
 
-// ------------------------------------------Diapo 
+window.addEventListener('scroll', scrollBtn)
+window.addEventListener('resize', scrollBtn)
+
+// ------------------ Diapo 
 //Array d'images
 const Images = [
 	"Fichiers/images/01_Vue_mer.JPG",
