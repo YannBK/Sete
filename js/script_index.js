@@ -82,7 +82,7 @@ let arrLen = Images.length - 1
 
 //changement automatique + manuel
 
-let speed = 2000;
+let speed = 3000;
 let i = 0;
 let b;
 let object_timer;
