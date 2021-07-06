@@ -135,6 +135,9 @@ video {
     border-radius: 5px;
     margin: 5px auto 5px auto;
 } 
+#divSlide:hover{
+    cursor:pointer;
+}
 #Slide{
     display: flex;
     height: 100%;
@@ -200,6 +203,9 @@ video {
 /* ----------------------------- Plan */
 #imgPlan{
     max-width: 100vw;
+}
+#imgPlan:hover{
+    cursor:pointer;
 }
 #txt{
     width: 40vw;

@@ -188,8 +188,9 @@ fullPlan.addEventListener('click', function(){
 	fullscreen(fullPlan);
 })
 
-let fullSlide = document.getElementById('Slide');
+let fullSlide = document.getElementById('divSlide');
+let smallSlide = document.getElementById('Slide');
 
-fullSlide.addEventListener('click', function(){
+smallSlide.addEventListener('click', function(){
 	fullscreen(fullSlide);
 })
