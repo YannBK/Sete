@@ -28,9 +28,6 @@
     #imgPlan{
         transform: scale(0.65);
     }
-    #divSlide{
-        transform: scale(0.9);
-    }
 }
 @media(max-height: 800px){/* ----------- height 800*/
     body{
@@ -87,6 +84,27 @@
     }
 }
    @media(max-width: 855px){/* ----------- width 855*/
+    html{
+        background: url("../Fichiers/images/beach-accueil.jpg") #000 no-repeat center center fixed;
+    }
+    #bgvid{
+        display: none;
+    }
+    #divSlide{
+        position:static;
+    }
+    .btn{
+        background-color: rgba(0, 0, 0, 0.4);
+        color: rgb(220, 220, 220);
+    }
+    #stop{
+        top: 92%;
+        bottom: 40px;
+    }
+    #play{
+        top: 92%;
+        bottom: 40px;
+    }
     #Tourisme{
         width: 80vw;
     }
@@ -157,5 +175,28 @@
     .infobulle:hover::after,
     .infobulle:focus::after {
       content: none;
+    }
+    #iframe{
+        height: 50vh;
+    }
+    #imgCal{
+        transform: scale(0.9);
+    }
+    #légende{
+        height: 70px;
+    }
+    #imgPlan{
+        transform: scale(0.9);
+    }
+    .btn{
+        padding: 0.8rem;
+        font-size: 1.1rem;
+    }
+    #stop{
+        margin-left: -4.5rem;
+        margin-right: 1rem;
+    }
+    #play{
+        margin-left: 2rem;
     }
 }

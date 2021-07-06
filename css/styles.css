@@ -41,6 +41,7 @@ video {
     width: 100vw;
     background-position: top;
     background-size: cover;
+    min-height: 100vh;
 }
 #princAccueil{
     max-height: 130vw;
@@ -202,7 +203,7 @@ video {
     font-weight: bold; 
 }
 #next-btn{
-    right: -2px;
+    right: 0;
     border-radius: 3px 0 0 3px;
 }
 #prev-btn{
@@ -212,14 +213,14 @@ video {
 #stop{
     top: 97%;
     bottom: -1px;
-    margin-left: -4rem;
-    margin-right: 4rem;
+    margin-left: -6rem;
+    margin-right: 2rem;
     border-radius: 3px;
 }
 #play{
     top: 97%;
     bottom: -1px;
-    margin-left: 4rem;
+    margin-left: 3rem;
     border-radius: 3px;
 }
 .btn:hover{
