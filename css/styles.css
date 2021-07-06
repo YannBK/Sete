@@ -53,16 +53,6 @@ video {
     justify-content: center;
     height: auto;
 }
-#txt{
-    width: 40vw;
-    height: auto;
-    text-align: justify;
-    font-size: 1.1rem;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px;
-    line-height: 1.4rem;
-    margin: auto;
-}
 #princTarifs{
     display: flex;
     align-items: center;
@@ -210,6 +200,16 @@ video {
 /* ----------------------------- Plan */
 #imgPlan{
     max-width: 100vw;
+}
+#txt{
+    width: 40vw;
+    height: auto;
+    text-align: justify;
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    line-height: 1.2rem;
+    margin: auto;
 }
 /* ----------------------------- Tarifs */
 .divlég{
