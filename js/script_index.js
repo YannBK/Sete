@@ -173,3 +173,23 @@ const removeHoverDiv = () => {
 
 divHover.addEventListener("mouseenter", hoverDiv)
 divHover.addEventListener("mouseleave", removeHoverDiv)
+
+// Switch plein écran
+function fullscreen(element){
+	return (element.requestFullscreen ||
+		element.webkitRequestFullscreen ||
+		element.mozRequestFullScreen ||
+		element.msRequestFullscreen).call(element);
+	}
+
+let fullPlan = document.getElementById('imgPlan');
+
+fullPlan.addEventListener('click', function(){
+	fullscreen(fullPlan);
+})
+
+let fullSlide = document.getElementById('Slide');
+
+fullSlide.addEventListener('click', function(){
+	fullscreen(fullSlide);
+})
