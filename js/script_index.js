@@ -12,7 +12,6 @@ function removeActive() {
 	while (current.length > 0) {
 		current[0].className = current[0].className.replace(" active", "");
 	}
-	btnContact.classList.remove('contactActive');
 }
 
 function scrollBtn() {
@@ -35,11 +34,11 @@ function scrollBtn() {
 		}
 		else if ((hauteur * 3 - hauteurChange) < position && position < (hauteur * 4 - hauteurChange)) {
 			removeActive();
-			btnRegion.className += " active";
+			btnContact.className += " active";
 		}
 		else if ((hauteur * 4 - hauteurChange) < position && position < (hauteur * 5 - hauteurChange)) {
 			removeActive();
-			btnContact.classList.add('contactActive');
+			btnRegion.className += " active";
 		}
 	}
 	else {
@@ -61,11 +60,11 @@ function scrollBtn() {
 		}
 		else if ((hauteur * 4 - hauteurChange) < position && position < (hauteur * 5 - hauteurChange)) {
 			removeActive();
-			btnRegion.className += " active";
+			btnContact.className += " active";
 		}
 		else if ((hauteur * 5 - hauteurChange) < position) {
 			removeActive();
-			btnContact.classList.add('contactActive');
+			btnRegion.className += " active";
 		}
 	}
 }
