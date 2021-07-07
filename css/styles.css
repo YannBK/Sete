@@ -79,7 +79,7 @@ video {
     position: fixed;
     justify-content: space-evenly;
     align-items: flex-start;
-    z-index: 100;
+    z-index: 15;
     margin: 0 2vw;
 }
 #Chalet{
@@ -135,9 +135,6 @@ video {
     border-radius: 5px;
     margin: 5px auto 5px auto;
 } 
-#divSlide:hover{
-    cursor:pointer;
-}
 #Slide{
     display: flex;
     height: 100%;
@@ -146,6 +143,9 @@ video {
     border: 1px solid black;
     max-width: 100vw;
     max-height: 70vw;
+}
+.zoom:hover{
+    cursor: zoom-in;
 }
 /* ----------------------------- Diapo boutons */
 .btn{
@@ -197,15 +197,10 @@ video {
     background-color: rgba(0, 0, 0, 0.5);
     color: rgb(220, 220, 220);
 } 
-#imgPlan{
-    transform: scale(0.8);
-}
 /* ----------------------------- Plan */
 #imgPlan{
+    transform: scale(0.8);    
     max-width: 100vw;
-}
-#imgPlan:hover{
-    cursor:pointer;
 }
 #txt{
     width: 40vw;
@@ -370,4 +365,101 @@ video {
     font-weight: bold;
     margin : 5px auto;
     max-width: 100vw;
+}
+/* ---------------- Fullscreen effects ----*/
+#divaphoto{
+position: absolute;
+top: 18vh;
+/* left: 2.5vw; */
+width: 100vw;
+height: 100vh;
+display: none;
+z-index: 12;
+}
+#divaopacité{
+    position: absolute;
+    top: 0;
+    /* left: 2.5vw; */
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.7;
+    background: #000000;
+    display: none;
+    z-index: 11;
+}
+#Slide2{
+    transform: scale(1.3);
+    cursor: zoom-out;
+}
+
+.btn2{
+    position: absolute;
+    top: 30vh;
+    width: auto;
+    /* margin-top: -2rem; */
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    transition: 0.4s ease-out;
+    text-decoration: none;
+    color: rgb(5, 5, 5);
+    font-size: 1.2rem;
+    font-weight: bold; 
+    background-color: rgba(156, 156, 156, 0.75);
+}#next-btn2{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+#prev-btn2{
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+#stop2{
+    align-content: center;
+    top: 80%;
+    /* margin-left: -20rem; */
+    border-radius: 3px;
+}
+#play2{
+    top: 80%;
+    /* margin-left: -8rem; */
+    border-radius: 3px;
+}
+.btn2:hover{
+    background-color: rgba(56, 56, 56, 0.75);
+    color: rgb(220, 220, 220);
+}
+.btn2:active{
+    transition: 0.1s;
+    color: rgb(71, 71, 71);
+}
+
+#divopacitéplan{
+    position: absolute;
+    /* top: 2.5vh; */
+    /* left: 2.5vw; */
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    /* background: #000000; */
+    display: none;
+    z-index: 11;
+    align-self: center;
+    justify-content: center;
+}
+#divfullplan{
+    position: relative;
+    top: 5vh;
+    /* left: 2.5vw; */
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    opacity: 1;
+    z-index: 12;
+}
+#imgPlan2:hover{
+    cursor:zoom-out;
 }
