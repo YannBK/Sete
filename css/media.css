@@ -62,6 +62,25 @@
         top: 2rem;
     }
 }
+@media(max-height : 900px){
+    #divaphoto{
+        top: 10vh;
+    }
+    #imgPlan2{
+        transform: scale(0.9);
+    }
+    #divfullplan{
+        top: -2vh;
+    }
+}
+@media(min-height : 900px){
+    #divaphoto{
+        top: 18vh;
+    }
+    #divfullplan{
+        top: 5vh;
+    }
+}
 @media(min-width : 1251px) {
     #txt{
         display: flex;
