@@ -1,5 +1,5 @@
 
-//! ------------------ activer / désactiver class
+//! --------------------------------------------------- activer / désactiver class
 let current = document.getElementsByClassName(" active");
 const btnAccueil = document.getElementById('btnAccueil')
 const btnDescription = document.getElementById('btnDescription')
@@ -73,7 +73,7 @@ function scrollBtn() {
 window.addEventListener('scroll', scrollBtn)
 window.addEventListener('resize', scrollBtn)
 
-//! ------------------ Diapo 
+//! --------------------------------------------------- Diapo 
 //*Array d'images
 const Images = [
 	"Fichiers/images/01_Vue_mer.JPG",
@@ -183,7 +183,7 @@ const removeHoverDiv = () => {
 divHover.addEventListener("mouseenter", hoverDiv)
 divHover.addEventListener("mouseleave", removeHoverDiv)
 
-//! Switch plein écran
+//! --------------------------------------------------- Switch plein écran
 
 //* variables
 const smallSlide = document.getElementById('Slide');
@@ -251,3 +251,6 @@ window.addEventListener('resize', zoom)
 
 //*pour éviter de faire un double click la première fois qu'on zoom
 document.onload(displayNone())
+
+
+
