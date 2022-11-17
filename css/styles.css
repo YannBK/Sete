@@ -3,6 +3,8 @@ body{
     position: relative;
     height: 100%;
     width: 100%;
+    max-width: 98vw;
+    /* overflow: hidden; */
     flex-direction: row;
     align-items: center;
     align-content: center;
@@ -43,54 +45,52 @@ video {
     background-size: cover;
     min-height: 100vh;
 }
-#princAccueil{
+#princ_accueil{
     max-height: 130vw;
 }
-#princPlan{
+#princ_double{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     height: auto;
 }
-#princTarifs{
+#princ_tarifs{
     display: flex;
     align-items: center;
     justify-content: center;
     max-height: 130vw;
 }
-#princRegion{
-    background: url("../Fichiers/fond_sete_2.jpg") no-repeat center;
+#princ_region{
+    background: url("../Fichiers/background/fond_sete_2.jpg") no-repeat center;
     background-attachment: fixed;
     max-height: 130vw;
 }
-#princContact{
+#princ_contact{
     display:flex;
     align-items: center;
     justify-content: center;
-    background: url("../Fichiers/fond_sete_2.jpg") no-repeat center;
+    background: url("../Fichiers/background/fond_sete_2.jpg") no-repeat center;
     background-attachment: fixed;
     max-height: 130vw;
 }
 /* ----------------------------- NavBar */
 #nav_contenu{
-    display: flex;
-    flex-direction: row;
     position: fixed;
-    justify-content: space-evenly;
-    align-items: flex-start;
     z-index: 15;
-    margin: 0 2vw;
+    margin: 0;
 }
 #Chalet{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 94vw;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100vw;
     height: 4rem;
-    background-color: transparent;
+    /* background-color: transparent; */
+    background-color: rgba(70, 151, 245, 255);
     line-height: 2.5rem;
-    padding: 0 1vw;
+    padding: 0px;
 }
 .lienNav{
     padding: 10px auto;
@@ -124,72 +124,86 @@ video {
     cursor: auto;
     text-decoration: underline #333 2px;
 }
+
  /* ----------------------------- Diapo */
-#divSlide{
-    display: inline-block;
+#div_slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     box-shadow: none;
-    max-width: 100vw;
+    max-width: 80vw;
+    width: 80vw;
     max-height: 70vw;
     height: 70vh;
     border-radius: 5px;
     margin: 5px auto 5px auto;
 } 
-#Slide{
+#img_slide{
     display: flex;
     height: 100%;
     margin: 0 auto;
     border-radius: 10px;
     border: 1px solid black;
-    max-width: 100vw;
+    max-width: 80vw;
     max-height: 70vw;
 }
 .zoom:hover{
     cursor: zoom-in;
 }
 /* ----------------------------- Diapo boutons */
-.btn{
+.next_btn{
     position: absolute;
+    right: 0;
+}
+
+.prev_btn{
+    position: absolute;
+    left: 0;
+}
+
+.btn_slide {
     top: 50%;
-    width: auto;
+    width: 40px;
     margin-top: -2rem;
-    padding: 1rem;
+    padding: 10px 0;
     border: none;
     cursor: pointer;
     outline: none;
     background-color: transparent;
+    -webkit-transition: 0.4s ease-out;
+    -o-transition: 0.4s ease-out;
     transition: 0.4s ease-out;
     text-decoration: none;
     color: rgb(68, 68, 68);
     font-size: 1.2rem;
     font-weight: bold; 
-}
-#next-btn{
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-#prev-btn{
-    left: 0;
-    border-radius: 0 3px 3px 0;
-}
-#stop{
-    top: 97%;
-    bottom: -1px;
-    margin-left: -6rem;
-    margin-right: 2rem;
     border-radius: 3px;
 }
-#play{
-    top: 97%;
-    bottom: -1px;
-    margin-left: 3rem;
-    border-radius: 3px;
+
+.btn_play_stop {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    bottom: 0;
 }
-.btn:hover{
+
+.btn_pl {
+    margin: 0px 20px;
+}
+.btn_slide:hover{
     background-color: rgba(0, 0, 0, 0.75);
     color: rgb(220, 220, 220);
 }
-.btn:active{
+.btn_slide:active{
     transition: 0.1s;
     color: rgb(71, 71, 71);
 }
@@ -197,12 +211,93 @@ video {
     background-color: rgba(0, 0, 0, 0.5);
     color: rgb(220, 220, 220);
 } 
+
+/* ---------------- Fullscreen effects ----*/
+
+#modal_background_slide{
+    position: absolute;
+    top: 80px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    z-index: 16;
+}
+#modal_content_slide{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+#img_modal{
+    transform: scale(1.2);
+    max-height: 100vh;
+    cursor: zoom-out;
+}
+.btn_modal{
+    top: 50%;
+    transform: translateY(-200%);
+    width: 60px;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    transition: 0.4s ease-out;
+    text-decoration: none;
+    color: rgb(5, 5, 5);
+    font-size: 1.2rem;
+    font-weight: bold; 
+    background-color: rgba(156, 156, 156, 0.75);
+}
+#btn_pl_modal {
+    bottom: 60px;
+}
+
+.btn_modal:hover{
+    background-color: rgba(56, 56, 56, 0.75);
+    color: rgb(220, 220, 220);
+}
+.btn_modal:active{
+    transition: 0.1s;
+    color: rgb(71, 71, 71);
+}
+#modal_background_plan{
+    position: absolute;
+    /* position: relative; */
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    z-index: 16;
+    align-self: center;
+    justify-content: center;
+}
+#modal_content_plan{
+    position: relative;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+#plan_modal{
+    max-height: 100vh;
+}
+#plan_modal:hover{
+    cursor:zoom-out;
+}
+
 /* ----------------------------- Plan */
 #imgPlan{
     transform: scale(0.8);    
     max-width: 100vw;
 }
-#txt{
+#princ_description{
     width: 40vw;
     height: auto;
     text-align: justify;
@@ -328,17 +423,17 @@ video {
     background-color: #444;
 }
 .infobulle {
-    position: relative;  /* les .infobulle deviennent référents */
+    position: relative;
 }
-  /* on génère un élément :after lors du survol et du focus :*/
+
 .infobulle:hover::after,
 .infobulle:focus::after {
-    content: attr(aria-label);  /* on affiche aria-label */
+    content: attr(aria-label);
     position: absolute;
     bottom: -3.5em;
     left: 50%;
-    transform: translateX(-50%); /* on centre horizontalement  */
-    z-index: 1; /* pour s'afficher au dessus des éléments en position relative */
+    transform: translateX(-50%);
+    z-index: 1;
     color:black;
     font-size: 1.9rem;
     border: rgb(248, 244, 223) solid 1px;
@@ -369,85 +464,4 @@ video {
     font-weight: bold;
     margin : 5px auto;
     max-width: 100vw;
-}
-/* ---------------- Fullscreen effects ----*/
-#divaphoto{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    display: none;
-}
-#divaopacité{
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.7);
-    display: none;
-    z-index: 16;
-}
-#Slide2{
-    transform: scale(1.3);
-    cursor: zoom-out;
-}
-.btn2{
-    position: absolute;
-    top: 30vh;
-    width: auto;
-    padding: 1rem;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    background-color: transparent;
-    transition: 0.4s ease-out;
-    text-decoration: none;
-    color: rgb(5, 5, 5);
-    font-size: 1.2rem;
-    font-weight: bold; 
-    background-color: rgba(156, 156, 156, 0.75);
-}#next-btn2{
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-#prev-btn2{
-    left: 0;
-    border-radius: 0 3px 3px 0;
-}
-/* #stop2{
-    align-content: center;
-    top: 80%;
-    border-radius: 3px;
-}
-#play2{
-    top: 80%;
-    border-radius: 3px;
-} */
-.btn2:hover{
-    background-color: rgba(56, 56, 56, 0.75);
-    color: rgb(220, 220, 220);
-}
-.btn2:active{
-    transition: 0.1s;
-    color: rgb(71, 71, 71);
-}
-#divopacitéplan{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.7);
-    display: none;
-    z-index: 16;
-    align-self: center;
-    justify-content: center;
-}
-#divfullplan{
-    position: relative;
-    margin: auto;
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    opacity: 1;
-}
-#imgPlan2:hover{
-    cursor:zoom-out;
 }

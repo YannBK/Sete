@@ -11,50 +11,56 @@
     <link href="css/stylesreset.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/media.css" rel="stylesheet">
+    <!--JavaScript-->
+    <script src="js/script_index.js" defer></script>
 </head>
 
 <body>
     <main>
-        <video playsinline autoplay muted loop poster="Fichiers/images/beach-accueil.jpg" id="bgvid">
-            <source src="Fichiers/video/Beach3_OK.mp4">
+        <video playsinline autoplay muted loop poster="Fichiers/background/beach-accueil.jpg" id="bgvid">
+            <source src="Fichiers/background/Beach3_OK.mp4">
         </video>
 
         <div id="nav_contenu">
             <nav id="Chalet">
-                <a href="#princAccueil" id="btnAccueil" class="lienNav active">Photos</a>
-                <a href="#txt" id="btnDescription" class="lienNav">Description</a>
-                <a href="#imgPlan" id="btnPlan" class="lienNav">Plan</a>
-                <a href="#princTarifs" id="btnTarifs" class="lienNav">Tarifs</a>
-                <a href="#princContact" id="btnContact" class="lienNav">Accès - Contact</a>
-                <a href="#princRegion" id="btnRegion" class="lienNav">Tourisme</a>
+                <a href="#princ_accueil" id="btn_accueil" class="lienNav active">Photos</a>
+                <a href="#princ_description" id="btn_description" class="lienNav">Description</a>
+                <a href="#princ_plan" id="btn_plan" class="lienNav">Plan</a>
+                <a href="#princ_tarifs" id="btn_tarifs" class="lienNav">Tarifs</a>
+                <a href="#princ_contact" id="btn_contact" class="lienNav">Accès - Contact</a>
+                <a href="#princ_region" id="btn_region" class="lienNav">Tourisme</a>
             </nav>
         </div>
 
-        <div class="princ" id="princAccueil">
+        <div class="princ" id="princ_accueil">
             <h1>Le lieu idéal pour vos vacances</h1>
-            <div id="divSlide">
-                <img src="Fichiers/images/01_Vue_mer.JPG" id="Slide" name="Slide" alt="Diaporama de l'appartement">
-                <button class='btn' id="prev-btn">&#10094;</button>
-                <button class='btn' id="stop">l l</button>
-                <button class='btn' id="play">&#9658;</button>
-                <button class='btn' id="next-btn">&#10095;</button>
+            <div id="div_slide">
+                <img src="Fichiers/images/00_vue-mer.jpg" id="img_slide" class="img_slide" alt="Diaporama de l'appartement">
+                <button class='btn_slide prev_btn' id="prev_btn">&#10094;</button>
+                <button class='btn_slide next_btn' id="next_btn">&#10095;</button>
+                <div class="btn_play_stop">
+                    <button class='btn_slide btn_pl stop' id="stop">l l</button>
+                    <button class='btn_slide btn_pl play' id="play">&#9658;</button>
+                </div>
             </div>
         </div>
-        <div id="divaopacité">
-            <div id="divaphoto">
-                <div id="divSlide2">
-                    <img src="Fichiers/images/01_Vue_mer.JPG" id="Slide2" name="Slide2"
+        <div id="modal_background_slide" class="modal">
+            <div id="modal_content_slide">
+                <div id="modal_slide">
+                    <img src="Fichiers/images/00_vue-mer.jpg" id="img_modal" class="img_modal"
                         alt="Diaporama de l'appartement">
-                    <button class='btn2' id="prev-btn2">&#10094;</button>
-                    <!-- <button class='btn2' id="stop2">l l</button>
-                    <button class='btn2' id="play2">&#9658;</button> -->
-                    <button class='btn2' id="next-btn2">&#10095;</button>
+                    <button class='btn_modal prev_btn' id="prev_btn_modal">&#10094;</button>
+                    <button class='btn_modal next_btn' id="next_btn_modal">&#10095;</button>
+                    <div class="btn_play_stop" id="btn_pl_modal">
+                        <button class='btn_modal btn_pl stop' id="stop2">l l</button>
+                        <button class='btn_modal btn_pl play' id="play2">&#9658;</button>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="princ" id="princPlan">
-            <section id="txt">
+        <div class="princ" id="princ_double">
+            <section id="princ_description">
                 <p>DESCRIPTIF<br><br>
                     Studio cabine au 5ème et dernier étage d’une résidence sécurisée avec ascenseur et gardien située à
                     150 m des plages avec une belle vue mer et sur le mont Saint Clair. Il comprend un salon-cuisine
@@ -74,15 +80,17 @@
                     également accessible en 10mn à pied).
                 </p>
             </section>
-            <img id="imgPlan" src="Fichiers/images/Plan2.png">
-            <div id="divopacitéplan">
-                <div id="divfullplan">
-                    <img id="imgPlan2" src="Fichiers/images/Plan2.png">
+            <section id="princ_plan">
+                <img id="imgPlan" src="Fichiers/pdf/Plan2.png" data-modal="plan">
+                <div id="modal_background_plan" class="modal">
+                    <div id="modal_content_plan">
+                        <img id="plan_modal" src="Fichiers/pdf/Plan2.png" data-modal="plan">
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
 
-        <div class="princ" id="princTarifs">
+        <div class="princ" id="princ_tarifs">
             <div class="divlég">
                 <img src="Fichiers/calendrier/Calendrier_tarifs_2022.JPG" alt="Calendrier des tarifs de location"
                     id="imgCal">
@@ -102,7 +110,7 @@
             <a href="Fichiers/pdf/PDF_2022.pdf" class="pdf" id="pdftarif" target="_blank">Téléchargez le Pdf</a>
         </div>
 
-        <div class="princ" id="princContact">
+        <div class="princ" id="princ_contact">
             <div class="divlég">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d5316.988963393672!2d3.6612163102558677!3d43.39565677125947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e2!4m0!4m3!3m2!1d43.3957392!2d3.6630722999999996!5e0!3m2!1sfr!2sfr!4v1623851056521!5m2!1sfr!2sfr"
@@ -119,7 +127,7 @@
             </a>
         </div>
 
-        <div class="princ" id="princRegion">
+        <div class="princ" id="princ_region">
             <div id="Tourisme">
                 <div>
                     <a href="https://www.tourisme-sete.com/" target="_blank" class="region">
@@ -154,8 +162,7 @@
                 </div>
             </div>
         </div>
-        <!--JavaScript-->
-        <script src="js/script_index.js"></script>
+        
     </main>
 
 </body>

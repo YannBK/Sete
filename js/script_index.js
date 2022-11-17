@@ -1,254 +1,222 @@
+main();
 
-//! --------------------------------------------------- activer / désactiver class
-let current = document.getElementsByClassName(" active");
-const btnAccueil = document.getElementById('btnAccueil')
-const btnDescription = document.getElementById('btnDescription')
-const btnPlan = document.getElementById('btnPlan')
-const btnTarifs = document.getElementById('btnTarifs')
-const btnRegion = document.getElementById('btnRegion')
-const btnContact = document.getElementById('btnContact');
-const btnNav = document.getElementsByClassName('lienNav')
+function main() {
+	window.addEventListener('load',()=>{
+		//pour éviter de faire un double click la première fois qu'on zoom, je ne comprends toujours pas pourquoi
+		closeModals();
+
+		const diapo = new Diapo(4, 20);
+		diapo.startDiapo();
+
+		const categories = ["accueil","description","plan","tarifs","contact","region"];
+		getIntersection(categories);
+
+		allowZoom();
+	});
+	
+	window.addEventListener('resize', ()=>{
+		allowZoom();
+	});
+}
+
+//! -------- class active des liens --------
+function getIntersection(arr) {
+	arr.forEach(cat => {
+
+		const elt = document.getElementById(`princ_${cat}`);
+		const observer = new IntersectionObserver((scrolls)=>{
+			scrolls.forEach((scroll) => {
+				if(scroll.isIntersecting) {
+					removeActive();
+					if(window.innerWidth > 1250 && (cat==="description" || cat==="plan")){
+						document.getElementById(`btn_description`).classList.add("active");
+						document.getElementById(`btn_plan`).classList.add("active");
+					} else {
+						document.getElementById(`btn_${cat}`).classList.add("active");
+					}
+				}
+			})
+		},{threshold:0.5});
+		observer.observe(elt);
+	})
+}
 
 function removeActive() {
-	while (current.length > 0) {
-		current[0].className = current[0].className.replace(" active", "");
+	let currentActive = document.getElementsByClassName("active");
+	while (currentActive.length > 0) {
+		currentActive[0].classList.remove("active");
 	}
 }
 
-function scrollBtn() {
-	let position = window.scrollY;
-	const hauteur = document.documentElement.clientHeight;
-	const hauteurChange = hauteur / 3;
-	if (window.innerWidth > 1250) {
-		if (position < (hauteur - hauteurChange)) {
-			removeActive();
-			btnAccueil.className += " active";
-		}
-		else if ((hauteur - hauteurChange) < position && position < (hauteur * 2 - hauteurChange)) {
-			removeActive();
-			btnDescription.className += " active";
-			btnPlan.className += " active";
-		}
-		else if ((hauteur * 2 - hauteurChange) < position && position < (hauteur * 3 - hauteurChange)) {
-			removeActive();
-			btnTarifs.className += " active";
-		}
-		else if ((hauteur * 3 - hauteurChange) < position && position < (hauteur * 4 - hauteurChange)) {
-			removeActive();
-			btnContact.className += " active";
-		}
-		else if ((hauteur * 4 - hauteurChange) < position && position < (hauteur * 5 - hauteurChange)) {
-			removeActive();
-			btnRegion.className += " active";
-		}
+//! -------- Diapo --------
+class Diapo {
+
+	constructor(speed, numberImages) {
+		this.speed = speed*1000;
+		this.numberImages = numberImages;
+
+		this.i = 0;
+		this.firstTimeManual = true;
+		this.object_timer;
 	}
-	else {
-		if (position < (hauteur - hauteurChange)) {
-			removeActive();
-			btnAccueil.className += " active";
+
+	images(number) {
+		let images = [];
+		for(let j = 0; j <= number; j++) {
+			// images.push(`./Fichiers/images/0_${j}.jpg`);
+			images.push(`../Fichiers/images/0_${j}.jpg`);
 		}
-		else if ((hauteur - hauteurChange) < position && position < (hauteur * 2 - hauteurChange)) {
-			removeActive();
-			btnDescription.className += " active";
-		}
-		else if ((hauteur * 2 - hauteurChange) < position && position < (hauteur * 3 - hauteurChange)) {
-			removeActive();
-			btnPlan.className += " active";
-		}
-		else if ((hauteur * 3 - hauteurChange) < position && position < (hauteur * 4 - hauteurChange)) {
-			removeActive();
-			btnTarifs.className += " active";
-		}
-		else if ((hauteur * 4 - hauteurChange) < position && position < (hauteur * 5 - hauteurChange)) {
-			removeActive();
-			btnContact.className += " active";
-		}
-		else if ((hauteur * 5 - hauteurChange) < position) {
-			removeActive();
-			btnRegion.className += " active";
-		}
+		return images;
 	}
+
+    autoSlide(arr) {
+        const btnPlay = document.querySelectorAll(".play");
+        const btnStop = document.querySelectorAll(".stop");
+        this.firstTimeManual = true;
+        if (document.images) {
+            document.getElementById("img_slide").src = arr[this.i];
+            document.getElementById("img_modal").src = arr[this.i];
+            document.getElementById("img_slide").dataset.modal = 'slide';
+            document.getElementById("img_modal").dataset.modal = 'slide';
+            this.i++;
+            if (this.i > arr.length - 1) { this.i = 0; }
+            this.objet_timer = setTimeout(()=>this.autoSlide(arr), this.speed);
+        }
+        btnPlay.forEach(btn=>btn.style.display = "none");
+        btnStop.forEach(btn=>btn.style.display = "block");
+    }
+
+    manualSlide(direction, arr) {
+        this.arret();
+        if (document.images) {
+            if(this.firstTimeManual === false){
+                this.i = this.i + direction;
+            } else {
+                if(this.i === 0) {
+                    this.i = arr.length;
+                }
+                if(direction === -1){
+                    this.i = this.i - 1 + direction;
+                }
+            }
+            if (this.i > arr.length - 1) {
+                this.i = 0;
+            }
+            if (this.i < 0) {
+                this.i = arr.length - 1;
+            }
+            document.getElementById("img_slide").src = arr[this.i];
+            document.getElementById("img_modal").src = arr[this.i];
+			document.getElementById("img_slide").dataset.modal = 'slide';
+            document.getElementById("img_modal").dataset.modal = 'slide';
+            this.firstTimeManual = false;
+        }
+    }
+
+    arret() {
+        const btnPlay = document.querySelectorAll(".play");
+        const btnStop = document.querySelectorAll(".stop");
+        btnStop.forEach(btn=>btn.style.display = "none");
+        btnPlay.forEach(btn=>btn.style.display = "block");
+        clearTimeout(this.objet_timer);
+    }
+
+    hoverDiv = () => {
+        const buttonDiv = document.getElementsByClassName("btn_slide");
+        for (let i = 0; i < buttonDiv.length; i++) {
+            buttonDiv[i].classList.add("hoverDiv");
+        }
+    }
+
+    removeHoverDiv = () => {
+        const buttonDiv = document.getElementsByClassName("btn_slide");
+        for (let i = 0; i < buttonDiv.length; i++) {
+            buttonDiv[i].classList.remove("hoverDiv");
+        }
+    }
+
+    startDiapo() {
+        const myDiapo = this.images(this.numberImages);
+
+        document.querySelectorAll(".prev_btn").forEach(btn=>btn.addEventListener("click", 
+			() => this.manualSlide(-1, myDiapo)
+		));
+
+        document.querySelectorAll(".next_btn").forEach(btn=>btn.addEventListener("click", 
+			()=> this.manualSlide(1, myDiapo)
+		));
+
+        document.querySelectorAll(".stop").forEach(btn=>btn.addEventListener("click", 
+			() => this.arret()
+		));
+
+        document.querySelectorAll(".play").forEach(btn=>btn.addEventListener("click", 
+			() => this.autoSlide(myDiapo)
+		));
+
+        document.querySelector("#div_slide").addEventListener("mouseenter", 
+			this.hoverDiv
+		);
+
+        document.querySelector("#div_slide").addEventListener("mouseleave", 
+			this.removeHoverDiv
+		);
+
+        this.autoSlide(myDiapo);
+    }
 }
 
-window.addEventListener('scroll', scrollBtn)
-window.addEventListener('resize', scrollBtn)
+//! -------- Zoom --------
+const img_slide = document.querySelectorAll('.img_slide');
+const img_modal = document.querySelectorAll('.img_modal');
+const modal_background_slide = document.getElementById('modal_background_slide');
 
-//! --------------------------------------------------- Diapo 
-//*Array d'images
-const Images = [
-	"Fichiers/images/00_vue-mer.JPG",
-	"Fichiers/images/01_chambre.JPG",
-	"Fichiers/images/02_entree.JPG",
-	"Fichiers/images/03_sdb.JPG",
-	"Fichiers/images/04_cuisine.jpg",
-	"Fichiers/images/05_salon1.jpg",
-	"Fichiers/images/05b_table.jpg",
-	"Fichiers/images/06_salon2.jpg",
-	"Fichiers/images/06b_lit.JPG",
-	"Fichiers/images/07_salon3.JPG",
-	"Fichiers/images/08_veranda1.JPG",
-	"Fichiers/images/09_veranda2.jpg",
-	"Fichiers/images/10_veranda3.jpg",
-	"Fichiers/images/11_terrasse.jpg",
-	"Fichiers/images/12_residence.jpg",
-	"Fichiers/images/13_residence2.jpg",
-	"Fichiers/images/14_environnement1.jpg",
-	"Fichiers/images/15_environnement2.jpg",
-	"Fichiers/images/16_canaux.jpg",
-	"Fichiers/images/17_saint-clair1.JPG",
-	"Fichiers/images/18_saint-clair2.JPG"
-];
-let arrLen = Images.length - 1
+const imgPlan = document.getElementById('imgPlan');
+const plan_modal = document.getElementById('plan_modal');
+const modal_background_plan = document.getElementById('modal_background_plan');
 
-//*changement automatique + manuel
-let speed = 3000;
-let i = 0;
-let b;
-let object_timer;
-
-function autoSlide(imgName) {
-	if (document.images) {
-		document.getElementById(imgName).src = Images[i];
-		i++;
-		if (i > arrLen) { i = 0; }
-		b = imgName;
-		objet_timer = setTimeout('autoSlide(b)', speed);
-	}
-	play.disabled = true;
-}
-
-function manualSlide(direction) {
-	arret();
-	play.disabled = false;
-	if (document.images) {
-		i = i + direction
-		if (i > arrLen) {
-			i = 0
-		}
-		if (i < 0) {
-			i = arrLen
-		}
-		document.Slide.src = Images[i];
-		document.Slide2.src = Images[i];
-	}
-}
-
-//*arreter le defilement
-function arret() {
-	clearTimeout(objet_timer);
-	play.disabled = false;
-}
-
-//*boutons de commande
-const prevBtn = document.getElementById('prev-btn');
-const prevBtn2 = document.getElementById('prev-btn2');
-prevBtn.addEventListener('click', () => manualSlide(-1));
-prevBtn2.addEventListener('click', () => manualSlide(-1));
-
-const nextBtn = document.getElementById('next-btn');
-const nextBtn2 = document.getElementById('next-btn2');
-nextBtn.addEventListener('click', () => manualSlide(1));
-nextBtn2.addEventListener('click', () => manualSlide(1));
-
-const stop = document.getElementById('stop');
-// const stop2 = document.getElementById('stop2');
-stop.addEventListener('click', () => arret());
-// stop2.addEventListener('click', () => arret());
-
-const play = document.getElementById('play');
-// const play2 = document.getElementById('play2');
-play.addEventListener('click', () => autoSlide('Slide'));
-// play2.addEventListener('click', () => autoSlide('Slide2'));
-
-autoSlide('Slide')
-
-//* effet hover sur l'image (fait apparaitre boutons)
-const divHover = document.querySelector('#divSlide');
-const buttonDiv = document.getElementsByClassName('btn');
-
-const hoverDiv = () => {
-	for (let i = 0; i < buttonDiv.length; i++) {
-		buttonDiv[i].classList.add('hoverDiv');
-	}
-}
-
-const removeHoverDiv = () => {
-	for (let i = 0; i < buttonDiv.length; i++) {
-		buttonDiv[i].classList.remove('hoverDiv');
-	}
-}
-
-divHover.addEventListener("mouseenter", hoverDiv)
-divHover.addEventListener("mouseleave", removeHoverDiv)
-
-//! --------------------------------------------------- Switch plein écran
-
-//* variables
-const smallSlide = document.getElementById('Slide');
-const Slide2 = document.getElementById('Slide2')
-const divaphoto = document.getElementById('divaphoto')
-const divaopacité = document.getElementById('divaopacité')
-
-const imgPlan = document.getElementById('imgPlan')
-const imgPlan2 = document.getElementById('imgPlan2')
-const divfullplan = document.getElementById('divfullplan')
-const divopacitéplan = document.getElementById('divopacitéplan')
-
-//*fonction switch
-function switchImage(elm1, elm2) {
-	if (window.innerWidth > 1000) {
-		if (elm1.style.display == 'none' && elm2.style.display == 'none') {//2em condition pas nécessaire
-			elm1.style.display = 'block';
-			elm2.style.display = 'block';
-		}
-		else {
-			elm1.style.display = 'none';
-			elm2.style.display = 'none';
-		}
-	}
-}
-
-//*eventlistener pour switch diapo
-smallSlide.addEventListener('click', () => switchImage(divaphoto, divaopacité))
-Slide2.addEventListener('click', () => switchImage(divaphoto, divaopacité))
-
-//*eventlistener pour switch plan
-imgPlan.addEventListener('click', () => switchImage(divfullplan, divopacitéplan))
-imgPlan2.addEventListener('click', () => switchImage(divfullplan, divopacitéplan))
-
-//*enleve fullscreen quand clique sur liennav
-function displayNone() {
-	divaphoto.style.display = 'none';
-	divaopacité.style.display = 'none';
-	divfullplan.style.display = 'none';
-	divopacitéplan.style.display = 'none';
-}
-
-function display() {
-	const btnNavLength = btnNav.length;
-	for (let i = 0; i < btnNavLength - 1; i++) {
-		btnNav[i].addEventListener('click', displayNone);
-	}
-}
-display();
-
-//*enlève curseur zoom si width<1000
-function zoom(){
-	let width = document.documentElement.clientWidth;
-	if(width > 1000){
-		smallSlide.classList.add('zoom');
+function allowZoom(){
+	if (window.innerWidth > 1000 && window.innerHeight > 750) {
+		img_slide.forEach(slide=>slide.classList.add('zoom'));
 		imgPlan.classList.add('zoom');
-	}
-	if(width < 1000){
-		smallSlide.classList.remove('zoom');
+		listenZoomOnClick();
+	} else {
+		img_slide.forEach(slide=>slide.classList.remove('zoom'));
 		imgPlan.classList.remove('zoom');
+		removeZoomOnClick();
 	}
 }
-zoom();
-window.addEventListener('resize', zoom)
 
-//*pour éviter de faire un double click la première fois qu'on zoom
-document.onload(displayNone())
+function listenZoomOnClick() {
+	img_slide.forEach(slide=>slide.addEventListener('click', switchZoom));
+	img_modal.forEach(slide=>slide.addEventListener('click', switchZoom));
+	
+	imgPlan.addEventListener('click', switchZoom);
+	plan_modal.addEventListener('click', switchZoom);
+}
 
+function removeZoomOnClick() {
+	img_slide.forEach(slide=>slide.removeEventListener('click', switchZoom));
+	img_modal.forEach(slide=>slide.removeEventListener('click', switchZoom));
+	
+	imgPlan.removeEventListener('click', switchZoom);
+	plan_modal.removeEventListener('click', switchZoom);
+}
 
+function switchZoom() {
+	const target = this.dataset.modal;
+	const modal = document.getElementById(`modal_background_${target}`);
 
+	if (window.innerWidth > 1000) {
+		if (modal.style.display == 'none') {
+			modal.style.display = 'block';
+		} else {
+			modal.style.display = 'none';
+		}
+	}
+}
+
+function closeModals() {
+	modal_background_slide.style.display = 'none';
+	modal_background_plan.style.display = 'none';
+}

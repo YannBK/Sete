@@ -63,26 +63,26 @@
     }
 }
 @media(max-height : 900px){
-    #divaphoto{
-        top: 10vh;
+    #modal_content_slide{
+        top: 80px;
     }
-    #imgPlan2{
+    #plan_modal{
         transform: scale(0.9);
     }
-    #divfullplan{
+    #modal_content_plan{
         top: -2vh;
     }
 }
 @media(min-height : 900px){
-    #divaphoto{
+    #modal_content_slide{
         top: 18vh;
     }
-    #divfullplan{
+    #modal_content_plan{
         top: 5vh;
     }
 }
 @media(min-width : 1251px) {
-    #txt{
+    #princ_description{
         display: flex;
         flex-direction: column;
         min-height: 620px;
@@ -91,18 +91,25 @@
     }
 }
 @media(max-width: 1250px){/* ----------- width 1250*/
-    #princPlan{
+    #princ_double{
         flex-direction: column;
     }
-    #txt{
+    #princ_description{
         width: 60vw;
+    }
+    #princ_plan {
+        width: 100vw;
+        position: relative;
     }
 }
  @media(max-width: 1100px){/* ----------- width 1100*/
-    #txt{
+    #princ_description{
         width: 80vw;
         font-size: 1rem;
         line-height: 1.2rem;
+    }
+    #princ_plan {
+        position: relative;
     }
     .legend{
         margin: 0px 20px; 
@@ -113,7 +120,7 @@
 }
    @media(max-width: 855px){/* ----------- width 855*/
     html{
-        background: url("../Fichiers/images/beach-accueil.jpg") #000 no-repeat center center fixed;
+        background: url("../Fichiers/background/beach-accueil.jpg") #000 no-repeat center center fixed;
     }
     #bgvid{
         display: none;
@@ -147,13 +154,13 @@
     #Chalet{
         flex-wrap: wrap;
         align-items: center;
-        line-height: 1.5rem;
+        line-height: 2rem;
+        height: 7rem;
+        padding: 10px 5px;
     }
     .lienNav{
-        margin: 0.1rem 0.1rem 0 0.1rem;
-    }
-    .lienNavCont{
-        margin: 0.1rem 0.1rem 0 0.1rem;
+        width: 30%;
+        margin: 5px;
     }
     #légende{
         width: 95vw;     
@@ -182,9 +189,6 @@
         margin: 0px 10px 0px 20px; 
     }
     .lienNav{
-        margin: 0.1rem 0 0 0;
-    }
-    .lienNavCont{
         margin: 0.1rem 0 0 0;
     }
     #pdfDes{
